@@ -15,8 +15,9 @@
 		715996EE1EDA2453008ED2D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 715996EC1EDA2453008ED2D5 /* LaunchScreen.storyboard */; };
 		715996F91EDA2453008ED2D5 /* Dog_Nap_AlarmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715996F81EDA2453008ED2D5 /* Dog_Nap_AlarmTests.swift */; };
 		715997041EDA2453008ED2D5 /* Dog_Nap_AlarmUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715997031EDA2453008ED2D5 /* Dog_Nap_AlarmUITests.swift */; };
-		715AA2341EDA37B700B8254C /* choose.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 715AA2331EDA37B700B8254C /* choose.storyboard */; };
+		715AA2341EDA37B700B8254C /* alarm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 715AA2331EDA37B700B8254C /* alarm.storyboard */; };
 		715AA2361EDA380A00B8254C /* settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 715AA2351EDA380A00B8254C /* settings.storyboard */; };
+		84CC5E821EDA474D003B56C3 /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CC5E811EDA474D003B56C3 /* AlarmViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,8 +52,9 @@
 		715996FF1EDA2453008ED2D5 /* Dog Nap AlarmUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dog Nap AlarmUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		715997031EDA2453008ED2D5 /* Dog_Nap_AlarmUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog_Nap_AlarmUITests.swift; sourceTree = "<group>"; };
 		715997051EDA2453008ED2D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		715AA2331EDA37B700B8254C /* choose.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = choose.storyboard; sourceTree = "<group>"; };
+		715AA2331EDA37B700B8254C /* alarm.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = alarm.storyboard; sourceTree = "<group>"; };
 		715AA2351EDA380A00B8254C /* settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = settings.storyboard; sourceTree = "<group>"; };
+		84CC5E811EDA474D003B56C3 /* AlarmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,9 +105,9 @@
 		715996DF1EDA2453008ED2D5 /* Dog Nap Alarm */ = {
 			isa = PBXGroup;
 			children = (
+				84CC5E801EDA4721003B56C3 /* ViewControllers */,
 				715AA2321EDA37A100B8254C /* storyboard */,
 				715996E01EDA2453008ED2D5 /* AppDelegate.swift */,
-				715996E21EDA2453008ED2D5 /* ViewController.swift */,
 				715996EA1EDA2453008ED2D5 /* Assets.xcassets */,
 				715996EC1EDA2453008ED2D5 /* LaunchScreen.storyboard */,
 				715996EF1EDA2453008ED2D5 /* Info.plist */,
@@ -136,10 +138,19 @@
 			isa = PBXGroup;
 			children = (
 				715996E41EDA2453008ED2D5 /* Main.storyboard */,
-				715AA2331EDA37B700B8254C /* choose.storyboard */,
+				715AA2331EDA37B700B8254C /* alarm.storyboard */,
 				715AA2351EDA380A00B8254C /* settings.storyboard */,
 			);
 			name = storyboard;
+			sourceTree = "<group>";
+		};
+		84CC5E801EDA4721003B56C3 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				715996E21EDA2453008ED2D5 /* ViewController.swift */,
+				84CC5E811EDA474D003B56C3 /* AlarmViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,7 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				715996EE1EDA2453008ED2D5 /* LaunchScreen.storyboard in Resources */,
-				715AA2341EDA37B700B8254C /* choose.storyboard in Resources */,
+				715AA2341EDA37B700B8254C /* alarm.storyboard in Resources */,
 				715996EB1EDA2453008ED2D5 /* Assets.xcassets in Resources */,
 				715996E61EDA2453008ED2D5 /* Main.storyboard in Resources */,
 				715AA2361EDA380A00B8254C /* settings.storyboard in Resources */,
@@ -281,6 +292,7 @@
 				715996E31EDA2453008ED2D5 /* ViewController.swift in Sources */,
 				715996E11EDA2453008ED2D5 /* AppDelegate.swift in Sources */,
 				715996E91EDA2453008ED2D5 /* Dog_Nap_Alarm.xcdatamodeld in Sources */,
+				84CC5E821EDA474D003B56C3 /* AlarmViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
