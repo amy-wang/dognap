@@ -15,6 +15,8 @@
 		715996EE1EDA2453008ED2D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 715996EC1EDA2453008ED2D5 /* LaunchScreen.storyboard */; };
 		715996F91EDA2453008ED2D5 /* Dog_Nap_AlarmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715996F81EDA2453008ED2D5 /* Dog_Nap_AlarmTests.swift */; };
 		715997041EDA2453008ED2D5 /* Dog_Nap_AlarmUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715997031EDA2453008ED2D5 /* Dog_Nap_AlarmUITests.swift */; };
+		715AA2341EDA37B700B8254C /* choose.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 715AA2331EDA37B700B8254C /* choose.storyboard */; };
+		715AA2361EDA380A00B8254C /* settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 715AA2351EDA380A00B8254C /* settings.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		715996FF1EDA2453008ED2D5 /* Dog Nap AlarmUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dog Nap AlarmUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		715997031EDA2453008ED2D5 /* Dog_Nap_AlarmUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog_Nap_AlarmUITests.swift; sourceTree = "<group>"; };
 		715997051EDA2453008ED2D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		715AA2331EDA37B700B8254C /* choose.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = choose.storyboard; sourceTree = "<group>"; };
+		715AA2351EDA380A00B8254C /* settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = settings.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +103,9 @@
 		715996DF1EDA2453008ED2D5 /* Dog Nap Alarm */ = {
 			isa = PBXGroup;
 			children = (
+				715AA2321EDA37A100B8254C /* storyboard */,
 				715996E01EDA2453008ED2D5 /* AppDelegate.swift */,
 				715996E21EDA2453008ED2D5 /* ViewController.swift */,
-				715996E41EDA2453008ED2D5 /* Main.storyboard */,
 				715996EA1EDA2453008ED2D5 /* Assets.xcassets */,
 				715996EC1EDA2453008ED2D5 /* LaunchScreen.storyboard */,
 				715996EF1EDA2453008ED2D5 /* Info.plist */,
@@ -126,6 +130,16 @@
 				715997051EDA2453008ED2D5 /* Info.plist */,
 			);
 			path = "Dog Nap AlarmUITests";
+			sourceTree = "<group>";
+		};
+		715AA2321EDA37A100B8254C /* storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				715996E41EDA2453008ED2D5 /* Main.storyboard */,
+				715AA2331EDA37B700B8254C /* choose.storyboard */,
+				715AA2351EDA380A00B8254C /* settings.storyboard */,
+			);
+			name = storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,8 +250,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				715996EE1EDA2453008ED2D5 /* LaunchScreen.storyboard in Resources */,
+				715AA2341EDA37B700B8254C /* choose.storyboard in Resources */,
 				715996EB1EDA2453008ED2D5 /* Assets.xcassets in Resources */,
 				715996E61EDA2453008ED2D5 /* Main.storyboard in Resources */,
+				715AA2361EDA380A00B8254C /* settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,6 +525,7 @@
 				7159970A1EDA2453008ED2D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7159970B1EDA2453008ED2D5 /* Build configuration list for PBXNativeTarget "Dog Nap AlarmTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +534,7 @@
 				7159970D1EDA2453008ED2D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7159970E1EDA2453008ED2D5 /* Build configuration list for PBXNativeTarget "Dog Nap AlarmUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +543,7 @@
 				715997101EDA2453008ED2D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

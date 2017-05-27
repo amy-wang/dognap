@@ -19,7 +19,18 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func chooseDog(){
+        let storyboard = UIStoryboard(name: "choose", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "main")
+        self.present(controller, animated: true, completion: nil)
+    }
 
+    @IBAction func settingsPage(){
+        let storyboard = UIStoryboard(name: "settings", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "settings")
+        self.present(controller, animated: true, completion: nil)
+    }
 
 }
 
