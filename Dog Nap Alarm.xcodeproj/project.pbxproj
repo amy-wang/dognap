@@ -17,6 +17,7 @@
 		715997041EDA2453008ED2D5 /* Dog_Nap_AlarmUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715997031EDA2453008ED2D5 /* Dog_Nap_AlarmUITests.swift */; };
 		715AA2341EDA37B700B8254C /* alarm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 715AA2331EDA37B700B8254C /* alarm.storyboard */; };
 		715AA2361EDA380A00B8254C /* settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 715AA2351EDA380A00B8254C /* settings.storyboard */; };
+		715AA2381EDA4AC000B8254C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715AA2371EDA4AC000B8254C /* SettingsViewController.swift */; };
 		84CC5E821EDA474D003B56C3 /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CC5E811EDA474D003B56C3 /* AlarmViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		715997051EDA2453008ED2D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		715AA2331EDA37B700B8254C /* alarm.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = alarm.storyboard; sourceTree = "<group>"; };
 		715AA2351EDA380A00B8254C /* settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = settings.storyboard; sourceTree = "<group>"; };
+		715AA2371EDA4AC000B8254C /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		84CC5E811EDA474D003B56C3 /* AlarmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -149,6 +151,7 @@
 			children = (
 				715996E21EDA2453008ED2D5 /* ViewController.swift */,
 				84CC5E811EDA474D003B56C3 /* AlarmViewController.swift */,
+				715AA2371EDA4AC000B8254C /* SettingsViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				715996E31EDA2453008ED2D5 /* ViewController.swift in Sources */,
 				715996E11EDA2453008ED2D5 /* AppDelegate.swift in Sources */,
 				715996E91EDA2453008ED2D5 /* Dog_Nap_Alarm.xcdatamodeld in Sources */,
+				715AA2381EDA4AC000B8254C /* SettingsViewController.swift in Sources */,
 				84CC5E821EDA474D003B56C3 /* AlarmViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,10 +10,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="xaO-NR-93r">
             <objects>
-                <viewController storyboardIdentifier="settings" id="4WD-vj-odA" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d5D-vW-4VG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="settings" id="4WD-vj-odA" customClass="SettingsViewController" customModule="Dog_Nap_Alarm" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yEk-ZK-nOs"/>
                         <viewControllerLayoutGuide type="bottom" id="Gg9-3F-q08"/>
@@ -40,6 +41,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6RL-BX-w1C">
                                 <rect key="frame" x="325" y="8" width="34" height="30"/>
                                 <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backToAlarm" destination="4WD-vj-odA" eventType="touchUpInside" id="Wk3-sS-O88"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -52,7 +56,6 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="d5D-vW-4VG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1656.8" y="36.431784107946029"/>
         </scene>
