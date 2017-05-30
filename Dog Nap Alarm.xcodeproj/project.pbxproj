@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40883C1C1EDDF01A00C601C9 /* HexToUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40883C1B1EDDF01A00C601C9 /* HexToUIColor.swift */; };
 		40D4E19B1EDCE06A005F0466 /* DogCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D4E19A1EDCE06A005F0466 /* DogCollectionViewController.swift */; };
 		40D4E19F1EDCF6D9005F0466 /* DogImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D4E19E1EDCF6D9005F0466 /* DogImageCollectionViewCell.swift */; };
 		715996E11EDA2453008ED2D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715996E01EDA2453008ED2D5 /* AppDelegate.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		40883C1B1EDDF01A00C601C9 /* HexToUIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HexToUIColor.swift; sourceTree = "<group>"; };
 		40D4E19A1EDCE06A005F0466 /* DogCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogCollectionViewController.swift; sourceTree = "<group>"; };
 		40D4E19E1EDCF6D9005F0466 /* DogImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		715996DD1EDA2453008ED2D5 /* Dog Nap Alarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dog Nap Alarm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +92,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		40883C1A1EDDEFD100C601C9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				40883C1B1EDDF01A00C601C9 /* HexToUIColor.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		40D4E19D1EDCF6C4005F0466 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +131,7 @@
 		715996DF1EDA2453008ED2D5 /* Dog Nap Alarm */ = {
 			isa = PBXGroup;
 			children = (
+				40883C1A1EDDEFD100C601C9 /* Extensions */,
 				40D4E19D1EDCF6C4005F0466 /* Views */,
 				84CC5E801EDA4721003B56C3 /* ViewControllers */,
 				715AA2321EDA37A100B8254C /* Storyboard */,
@@ -312,6 +323,7 @@
 			files = (
 				715996E31EDA2453008ED2D5 /* ViewController.swift in Sources */,
 				40D4E19B1EDCE06A005F0466 /* DogCollectionViewController.swift in Sources */,
+				40883C1C1EDDF01A00C601C9 /* HexToUIColor.swift in Sources */,
 				715996E11EDA2453008ED2D5 /* AppDelegate.swift in Sources */,
 				715996E91EDA2453008ED2D5 /* Dog_Nap_Alarm.xcdatamodeld in Sources */,
 				715AA2381EDA4AC000B8254C /* SettingsViewController.swift in Sources */,
