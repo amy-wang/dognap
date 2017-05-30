@@ -21,11 +21,8 @@
 		715AA2341EDA37B700B8254C /* alarm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 715AA2331EDA37B700B8254C /* alarm.storyboard */; };
 		715AA2361EDA380A00B8254C /* settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 715AA2351EDA380A00B8254C /* settings.storyboard */; };
 		715AA2381EDA4AC000B8254C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715AA2371EDA4AC000B8254C /* SettingsViewController.swift */; };
-<<<<<<< HEAD
 		715AA23E1EDDD1A300B8254C /* SoundTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715AA23D1EDDD1A300B8254C /* SoundTableViewController.swift */; };
-=======
 		84C738DA1EDCEC4300BCA545 /* sound1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 84C738D91EDCEC4300BCA545 /* sound1.mp3 */; };
->>>>>>> ab229b54b65d21655401089136f3438141995c19
 		84CC5E821EDA474D003B56C3 /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CC5E811EDA474D003B56C3 /* AlarmViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -67,11 +64,8 @@
 		715AA2331EDA37B700B8254C /* alarm.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = alarm.storyboard; sourceTree = "<group>"; };
 		715AA2351EDA380A00B8254C /* settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = settings.storyboard; sourceTree = "<group>"; };
 		715AA2371EDA4AC000B8254C /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-<<<<<<< HEAD
 		715AA23D1EDDD1A300B8254C /* SoundTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundTableViewController.swift; sourceTree = "<group>"; };
-=======
 		84C738D91EDCEC4300BCA545 /* sound1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound1.mp3; sourceTree = "<group>"; };
->>>>>>> ab229b54b65d21655401089136f3438141995c19
 		84CC5E811EDA474D003B56C3 /* AlarmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -187,11 +181,8 @@
 				715996E21EDA2453008ED2D5 /* ViewController.swift */,
 				84CC5E811EDA474D003B56C3 /* AlarmViewController.swift */,
 				715AA2371EDA4AC000B8254C /* SettingsViewController.swift */,
-<<<<<<< HEAD
 				715AA23D1EDDD1A300B8254C /* SoundTableViewController.swift */,
-=======
 				40D4E19A1EDCE06A005F0466 /* DogCollectionViewController.swift */,
->>>>>>> ab229b54b65d21655401089136f3438141995c19
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -340,11 +331,8 @@
 				715996E91EDA2453008ED2D5 /* Dog_Nap_Alarm.xcdatamodeld in Sources */,
 				715AA2381EDA4AC000B8254C /* SettingsViewController.swift in Sources */,
 				84CC5E821EDA474D003B56C3 /* AlarmViewController.swift in Sources */,
-<<<<<<< HEAD
 				715AA23E1EDDD1A300B8254C /* SoundTableViewController.swift in Sources */,
-=======
 				40D4E19F1EDCF6D9005F0466 /* DogImageCollectionViewCell.swift in Sources */,
->>>>>>> ab229b54b65d21655401089136f3438141995c19
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

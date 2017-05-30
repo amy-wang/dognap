@@ -89,7 +89,9 @@ class DogCollectionViewController: UICollectionViewController {
             let index = checkArray.index(of: indexPath.row)
             checkArray.remove(at: index!)
         } else {
-            checkArray.append(indexPath.row)
+            if (checkArray.isEmpty) {
+                checkArray.append(indexPath.row)
+            }
         }
         
         // Update choose button based on selection
@@ -114,9 +116,10 @@ class DogCollectionViewController: UICollectionViewController {
         button.backgroundColor = UIColor(hex: "00FF80")
         button.accessibilityIdentifier = "ChooseButtonID"
         
-        // Button Action
+        // Button Action + Disable Before Choice
         button.addTarget(self, action: buttonAction, for: .touchUpInside)
-        
+        button.isEnabled = false;
+        button.isUserInteractionEnabled = false;
         self.view.addSubview(button)
         
         // Constraints
