@@ -22,7 +22,8 @@ class DogCollectionViewController: UICollectionViewController {
         private let reuseIdentifier = "Cell"
         static let dogCell = "DogCell"
         static let footerButton = "FooterViewID"
-        static let dogChosenSegue = "DogChosenSegue"
+        static let dogChosenSegueToSettings = "DogChosenSegueToSettings"
+        static let dogChosenSegueToAlarm = "DogChosenSegueToAlarm"
         static let leftAndRightPaddings: CGFloat = 2.0
         static let numberOfItemsPerRow: CGFloat = 2.0
     }
@@ -142,9 +143,15 @@ class DogCollectionViewController: UICollectionViewController {
     
     func pressButton(button: UIButton) {
         let dogIndex = checkArray[0];
-        settings.set(dogNames[dogIndex], forKey: "dogName")
-        NSLog(dogNames[dogIndex]);
-        performSegue(withIdentifier: Storyboard.dogChosenSegue, sender: button)
+        let dogName = dogNames[dogIndex];
+        settings.set(dogName, forKey: "dogName")
+        
+        if !settings.bool(forKey: "firstBoot") {
+            settings.set(true, forKey: "firstBoot");
+            performSegue(withIdentifier: Storyboard.dogChosenSegueToAlarm, sender: button)
+        } else {
+            performSegue(withIdentifier: Storyboard.dogChosenSegueToSettings, sender: button)
+        }
     }
 }
 

@@ -11,18 +11,15 @@ import UIKit
 class SettingsViewController: UITableViewController, UIPickerViewDelegate, UIPickerViewDataSource{
 
     @IBOutlet weak var vibrate: UISwitch!
-
     @IBOutlet weak var snoozeDone: UIButton!
-
     @IBOutlet var picker: UITableView!
 
-    
-    var settingsArray = ["Sound", "Snooze", "Default Nap Length", "Vibrate"]
-    var snoozeTime = ["1 min", "2 min", "3 min", "4 min", "5 min", "6 min", "7 min", "8 min", "9 min", "10 min", "11 min", "12 min", "13 min", "14 min", "15 min"]
-    var defaultTime = ["5 min", "10 min", "15 min", "20 min", "25 min", "30 min", "35 min", "40 min", "45 min", "50 min", "55 min", "60 min"]
-    var snoozeData: Bool = false
-    
     let settings = UserDefaults.standard
+
+    var settingsArray = ["Sound", "Snooze", "Default Nap Length", "Vibrate"]
+    var snoozeTime = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    var defaultTime = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60]
+    var snoozeData: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,10 +76,10 @@ class SettingsViewController: UITableViewController, UIPickerViewDelegate, UIPic
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if snoozeData{
-            return snoozeTime[row]
+            return String(snoozeTime[row]) + " min"
         }
         else{
-            return defaultTime[row]
+            return String(defaultTime[row]) + " min"
         }
         
     }

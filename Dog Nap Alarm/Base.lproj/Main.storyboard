@@ -59,7 +59,8 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <segue destination="raH-NV-Fub" kind="show" identifier="DogChosenSegue" id="juA-ZK-ApL"/>
+                        <segue destination="raH-NV-Fub" kind="show" identifier="DogChosenSegueToSettings" id="juA-ZK-ApL"/>
+                        <segue destination="ojl-Nt-cBU" kind="show" identifier="DogChosenSegueToAlarm" id="lGv-3r-Hhj"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WkD-1z-rAw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -67,12 +68,20 @@
             <point key="canvasLocation" x="202.5" y="57.04225352112676"/>
         </scene>
         <!--alarm-->
+        <scene sceneID="Kwv-Xp-R1N">
+            <objects>
+                <viewControllerPlaceholder storyboardName="alarm" id="ojl-Nt-cBU" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BT6-az-KKP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="899" y="-62"/>
+        </scene>
+        <!--settings-->
         <scene sceneID="SZn-dn-2za">
             <objects>
-                <viewControllerPlaceholder storyboardName="alarm" id="raH-NV-Fub" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="settings" id="raH-NV-Fub" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Pz-yN-2ky" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="899" y="56"/>
+            <point key="canvasLocation" x="898" y="189"/>
         </scene>
     </scenes>
     <resources>
