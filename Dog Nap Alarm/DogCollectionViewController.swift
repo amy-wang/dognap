@@ -29,7 +29,7 @@ class DogCollectionViewController: UICollectionViewController {
         let itemWidth = (collectionViewWidth! - Storyboard.leftAndRightPaddings) / Storyboard.numberOfItemsPerRow
         
         let layout = collectionViewLayout as! UICollectionViewFlowLayout
-        layout.itemSize = CGSize(width: itemWidth, height: itemWidth * 1.5)
+        layout.itemSize = CGSize(width: itemWidth, height: itemWidth)
         
         dogImages += [
             #imageLiteral(resourceName: "shiba_hex"),
@@ -77,9 +77,9 @@ class DogCollectionViewController: UICollectionViewController {
         cell.DogImageView.image = dogImages[indexPath.item]
         
         if checkArray.contains(indexPath.row) {
-            cell.DogImageView.image = dogImages[indexPath.item]
-        } else {
             cell.DogImageView.image = dogImagesChecked[indexPath.item]
+        } else {
+            cell.DogImageView.image = dogImages[indexPath.item]
         }
 
         return cell

@@ -13,48 +13,44 @@
         <scene sceneID="OFR-RA-LNO">
             <objects>
                 <collectionViewController id="Eme-Wv-dem" customClass="DogCollectionViewController" customModule="Dog_Nap_Alarm" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Zgw-1r-Cb8">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="Zgw-1r-Cb8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.24313725490196078" green="0.24313725490196078" blue="0.23137254901960785" alpha="1" colorSpace="calibratedRGB"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="1" id="zyH-BA-4C0">
-                            <size key="itemSize" width="200" height="300"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="zyH-BA-4C0">
+                            <size key="itemSize" width="200" height="200"/>
+                            <size key="headerReferenceSize" width="0.0" height="40"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DogCell" id="und-Js-rgi" customClass="DogImageCollectionViewCell" customModule="Dog_Nap_Alarm" customModuleProvider="target">
-                                <rect key="frame" x="60" y="0.0" width="200" height="300"/>
+                                <rect key="frame" x="60" y="40" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" tag="155" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shiba_hex" translatesAutoresizingMaskIntoConstraints="NO" id="Hk0-KI-KVL">
-                                            <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
+                                        <imageView userInteractionEnabled="NO" tag="155" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shiba_hex" translatesAutoresizingMaskIntoConstraints="NO" id="Hk0-KI-KVL">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                         </imageView>
                                     </subviews>
                                 </view>
                                 <constraints>
-                                    <constraint firstItem="Hk0-KI-KVL" firstAttribute="top" secondItem="und-Js-rgi" secondAttribute="top" id="18a-TB-Thh"/>
-                                    <constraint firstAttribute="trailing" secondItem="Hk0-KI-KVL" secondAttribute="trailing" id="7iE-ER-bkD"/>
-                                    <constraint firstAttribute="trailing" secondItem="Hk0-KI-KVL" secondAttribute="trailing" id="H7x-gp-lJU"/>
-                                    <constraint firstAttribute="trailing" secondItem="Hk0-KI-KVL" secondAttribute="trailing" id="Kwg-0Q-mFw"/>
-                                    <constraint firstAttribute="bottom" secondItem="Hk0-KI-KVL" secondAttribute="bottom" id="P3b-7y-S2Q"/>
-                                    <constraint firstItem="Hk0-KI-KVL" firstAttribute="leading" secondItem="und-Js-rgi" secondAttribute="leading" id="YX4-oZ-b2O"/>
-                                    <constraint firstItem="Hk0-KI-KVL" firstAttribute="leading" secondItem="und-Js-rgi" secondAttribute="leading" id="aS1-Fn-HeA"/>
-                                    <constraint firstItem="Hk0-KI-KVL" firstAttribute="leading" secondItem="und-Js-rgi" secondAttribute="leading" id="alx-TR-1lR"/>
-                                    <constraint firstAttribute="bottom" secondItem="Hk0-KI-KVL" secondAttribute="bottom" id="dYg-5y-GB3"/>
-                                    <constraint firstItem="Hk0-KI-KVL" firstAttribute="top" secondItem="und-Js-rgi" secondAttribute="top" id="kn8-ms-0ka"/>
-                                    <constraint firstItem="Hk0-KI-KVL" firstAttribute="top" secondItem="und-Js-rgi" secondAttribute="top" id="rsM-dU-mFL"/>
-                                    <constraint firstAttribute="bottom" secondItem="Hk0-KI-KVL" secondAttribute="bottom" id="zd1-oy-p2S"/>
+                                    <constraint firstAttribute="trailing" secondItem="Hk0-KI-KVL" secondAttribute="trailing" id="3sx-i0-PN7"/>
+                                    <constraint firstAttribute="bottom" secondItem="Hk0-KI-KVL" secondAttribute="bottom" id="MdX-qf-bDc"/>
+                                    <constraint firstItem="Hk0-KI-KVL" firstAttribute="top" secondItem="und-Js-rgi" secondAttribute="top" id="ttg-Ob-95H"/>
+                                    <constraint firstItem="Hk0-KI-KVL" firstAttribute="leading" secondItem="und-Js-rgi" secondAttribute="leading" id="uMD-TA-qym"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="DogImageView" destination="Hk0-KI-KVL" id="1zU-C3-5Eq"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DogHeaderCollectionView" id="qy8-70-v2F">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </collectionReusableView>
                         <connections>
                             <outlet property="dataSource" destination="Eme-Wv-dem" id="7ON-RV-bC5"/>
                             <outlet property="delegate" destination="Eme-Wv-dem" id="fq9-v6-5IK"/>
