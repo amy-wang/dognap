@@ -13,6 +13,8 @@ private let reuseIdentifier = "Cell"
 class DogCollectionViewController: UICollectionViewController {
     
     var dogImages: [UIImage] = [];
+    var dogImagesChecked: [UIImage] = [];
+    var checkArray = [Int]();
     
     struct Storyboard {
         static let dogCell = "DogCell"
@@ -32,8 +34,15 @@ class DogCollectionViewController: UICollectionViewController {
         dogImages += [
             #imageLiteral(resourceName: "shiba_hex"),
             #imageLiteral(resourceName: "pug_hex"),
-            #imageLiteral(resourceName: "chihuahua_hex"),
-            #imageLiteral(resourceName: "beagle_hex")
+            #imageLiteral(resourceName: "beagle_hex"),
+            #imageLiteral(resourceName: "chihuahua_hex")
+        ]
+        
+        dogImagesChecked += [
+            #imageLiteral(resourceName: "shiba_checked"),
+            #imageLiteral(resourceName: "pug_checked"),
+            #imageLiteral(resourceName: "beagle_checked"),
+            #imageLiteral(resourceName: "chihuahua_checked")
         ]
     }
 
@@ -66,7 +75,13 @@ class DogCollectionViewController: UICollectionViewController {
     
         // Configure the cell
         cell.DogImageView.image = dogImages[indexPath.item]
-    
+        
+        if checkArray.contains(indexPath.row) {
+            cell.DogImageView.image = dogImages[indexPath.item]
+        } else {
+            cell.DogImageView.image = dogImagesChecked[indexPath.item]
+        }
+
         return cell
     }
 
@@ -81,12 +96,20 @@ class DogCollectionViewController: UICollectionViewController {
     }
     */
 
-    /*
+    
     // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        if checkArray.contains(indexPath.row) {
+            let index = checkArray.index(of: indexPath.row)
+            checkArray.remove(at: index!)
+            collectionView.reloadItems(at: [indexPath])
+        } else {
+            checkArray.append(indexPath.row)
+            collectionView.reloadItems(at: [indexPath])
+        }
     }
-    */
+    
 
     /*
     // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
