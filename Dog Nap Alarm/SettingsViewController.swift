@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import MessageUI
 
 class SettingsViewController: UITableViewController, UIPickerViewDelegate, UIPickerViewDataSource{
 
     @IBOutlet weak var vibrate: UISwitch!
     @IBOutlet weak var snoozeDone: UIButton!
     @IBOutlet var picker: UITableView!
+    @IBOutlet weak var snoozeDetail: UILabel!
+    @IBOutlet weak var defaultTimeDetail: UILabel!
 
     let settings = UserDefaults.standard
 
@@ -23,6 +26,8 @@ class SettingsViewController: UITableViewController, UIPickerViewDelegate, UIPic
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        snoozeDetail.text = String(settings.integer(forKey: "Snooze")) + " min"
+        defaultTimeDetail.text = String(settings.integer(forKey: "Default Time")) + " min"
         picker.isHidden = true
         snoozeDone.isHidden = true
         picker.dataSource = self
@@ -88,10 +93,12 @@ class SettingsViewController: UITableViewController, UIPickerViewDelegate, UIPic
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if snoozeData{
             settings.set(snoozeTime[row], forKey: "Snooze")
+            snoozeDetail.text = String(settings.integer(forKey: "Snooze")) + " min"
             print(snoozeTime[row])
         }
         else{
             settings.set(defaultTime[row], forKey: "Default")
+            defaultTimeDetail.text = String(settings.integer(forKey: "Default Time")) + " min"
             print(defaultTime[row])
         }
 
@@ -104,12 +111,23 @@ class SettingsViewController: UITableViewController, UIPickerViewDelegate, UIPic
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath)
         let text = cell?.textLabel?.text
-        print(text!)
         if (text=="Snooze"){
             displaySnooze()
         }
         else if (text=="Default Nap Length"){
             displayDefault()
+        }
+        // pop up opens if rate/feedback clicked
+        else if (text=="Rate/Feedback"){
+            let alert = UIAlertController(title: "Dog Nap", message: "Did you enjoy using this app?" , preferredStyle: .alert)
+            let yesAction = UIAlertAction(title: "Yes", style: .default, handler: nil)
+            let noAction = UIAlertAction(title: "No", style: .default, handler: nil)
+            let backAction = UIAlertAction(title: "Back", style: .default, handler: nil)
+            alert.addAction(yesAction)
+            alert.addAction(noAction)
+            alert.addAction(backAction)
+            self.present(alert, animated: true, completion: nil)
+            
         }
     }
     
