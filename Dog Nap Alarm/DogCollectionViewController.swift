@@ -8,16 +8,21 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
-
 class DogCollectionViewController: UICollectionViewController {
     
     var dogImages: [UIImage] = [];
     var dogImagesChecked: [UIImage] = [];
     var checkArray = [Int]();
     
+    var chooseButton: UIButton?;
+    
+    var buttonAction = #selector(pressButton(button:));
+    
     struct Storyboard {
+        private let reuseIdentifier = "Cell"
         static let dogCell = "DogCell"
+        static let footerButton = "FooterViewID"
+        static let dogChosenSegue = "DogChosenSegue"
         static let leftAndRightPaddings: CGFloat = 2.0
         static let numberOfItemsPerRow: CGFloat = 2.0
     }
@@ -44,17 +49,9 @@ class DogCollectionViewController: UICollectionViewController {
             #imageLiteral(resourceName: "beagle_checked"),
             #imageLiteral(resourceName: "chihuahua_checked")
         ]
+        
+        chooseButton = addChooseButton();
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
 
     // MARK: UICollectionViewDataSource
 
@@ -84,46 +81,58 @@ class DogCollectionViewController: UICollectionViewController {
 
         return cell
     }
-
     
-    
-    // MARK: UICollectionViewDelegate
-
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    
-    // Uncomment this method to specify if the specified item should be selected
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+        // Update images on select/deselect
         if checkArray.contains(indexPath.row) {
             let index = checkArray.index(of: indexPath.row)
             checkArray.remove(at: index!)
-            collectionView.reloadItems(at: [indexPath])
         } else {
             checkArray.append(indexPath.row)
-            collectionView.reloadItems(at: [indexPath])
         }
+        
+        // Update choose button based on selection
+        if checkArray.isEmpty {
+            chooseButton!.isEnabled = false;
+            chooseButton!.isUserInteractionEnabled = false;
+        } else {
+            chooseButton!.isEnabled = true;
+            chooseButton!.isUserInteractionEnabled = true;
+        }
+        
+        collectionView.reloadItems(at: [indexPath])
     }
     
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
+    fileprivate func addChooseButton() -> UIButton {
+        let button = UIButton()
+        
+        // Button View Settings
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("CHOOSE", for: UIControlState.normal)
+        button.setTitleColor(UIColor.white, for: UIControlState.normal)
+        button.backgroundColor = UIColor(hex: "00FF80")
+        button.accessibilityIdentifier = "ChooseButtonID"
+        
+        // Button Action
+        button.addTarget(self, action: buttonAction, for: .touchUpInside)
+        
+        self.view.addSubview(button)
+        
+        // Constraints
+        button.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        button.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+        button.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true
+        button.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
+        //button.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        button.heightAnchor.constraint(equalToConstant: 90).isActive = true
+        
+        return button;
     }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
     
+    func pressButton(button: UIButton) {
+        performSegue(withIdentifier: Storyboard.dogChosenSegue, sender: button)
     }
-    */
-
 }
+
+
