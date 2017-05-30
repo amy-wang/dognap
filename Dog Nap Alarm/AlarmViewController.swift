@@ -21,6 +21,7 @@ class AlarmViewController: UIViewController {
     @IBOutlet weak var snoozeOutlet: UIButton!
     @IBOutlet weak var stopAlarmOutlet: UIButton!
     @IBOutlet weak var dogSpeech: UILabel!
+    
 
     //varibles
     var player:AVAudioPlayer = AVAudioPlayer()
@@ -30,6 +31,9 @@ class AlarmViewController: UIViewController {
     var resumeTapped = false
     var isTimerunning = false
     var snoozeTime = 5
+    let settingsPage = UserDefaults.standard
+
+  
    
     // method for counting down
     func runtimer(){
@@ -76,7 +80,12 @@ class AlarmViewController: UIViewController {
         let newHour = totalSec / 3600
         let newMin = totalSec / 60 % 60
         timerLabel.text = String(mins) + ":00"
-        dogSpeech.text = "You will wake up at: " + String(format:"%02i:%02i", newHour, newMin)
+        if(newHour <= 12){
+            dogSpeech.text = "You will wake up at: " + String(format:"%02i:%02i AM", newHour, newMin)
+        }else{
+            let temphour = newHour - 12
+            dogSpeech.text = "You will wake up at: " + String(format:"%02i:%02i PM", temphour, newMin)
+        }
         
     }
    
@@ -158,7 +167,13 @@ class AlarmViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         do{
-            let audioPath = Bundle.main.path(forResource: "sound1", ofType: "mp3")
+            
+            var sound = settingsPage.string(forKey: "Sound")
+            if (sound?.isEmpty)!{
+                sound = "sound1"
+            }
+            
+            let audioPath = Bundle.main.path(forResource: sound, ofType: "mp3")
             try player = AVAudioPlayer(contentsOf:URL(fileURLWithPath:audioPath!))
         }
         catch{
@@ -169,12 +184,6 @@ class AlarmViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-
-    @IBAction func settingsPage(){
-        let storyboard = UIStoryboard(name: "settings", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "settings")
-        self.present(controller, animated: true, completion: nil)
     }
 
     
