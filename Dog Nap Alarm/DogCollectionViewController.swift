@@ -12,11 +12,11 @@ class DogCollectionViewController: UICollectionViewController {
     
     var dogImages: [UIImage] = [];
     var dogImagesChecked: [UIImage] = [];
+    var dogNames: [String] = [];
     var checkArray = [Int]();
-    
     var chooseButton: UIButton?;
+    let settings = UserDefaults.standard;
     
-    var buttonAction = #selector(pressButton(button:));
     
     struct Storyboard {
         private let reuseIdentifier = "Cell"
@@ -48,6 +48,13 @@ class DogCollectionViewController: UICollectionViewController {
             #imageLiteral(resourceName: "pug_checked"),
             #imageLiteral(resourceName: "beagle_checked"),
             #imageLiteral(resourceName: "chihuahua_checked")
+        ]
+        
+        dogNames += [
+            "Shiba",
+            "Pug",
+            "Beagle",
+            "Chihuahua"
         ]
         
         chooseButton = addChooseButton();
@@ -117,7 +124,7 @@ class DogCollectionViewController: UICollectionViewController {
         button.accessibilityIdentifier = "ChooseButtonID"
         
         // Button Action + Disable Before Choice
-        button.addTarget(self, action: buttonAction, for: .touchUpInside)
+        button.addTarget(self, action: #selector(pressButton(button:)), for: .touchUpInside)
         button.isEnabled = false;
         button.isUserInteractionEnabled = false;
         self.view.addSubview(button)
@@ -134,6 +141,9 @@ class DogCollectionViewController: UICollectionViewController {
     }
     
     func pressButton(button: UIButton) {
+        let dogIndex = checkArray[0];
+        settings.set(dogNames[dogIndex], forKey: "dogName")
+        NSLog(dogNames[dogIndex]);
         performSegue(withIdentifier: Storyboard.dogChosenSegue, sender: button)
     }
 }
