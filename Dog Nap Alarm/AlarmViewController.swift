@@ -149,6 +149,10 @@ class AlarmViewController: UIViewController {
     @IBAction func snoozeBtn(_ sender: UIButton) {
         timer.invalidate()
         player.stop()
+        var snoozeTime = settingsPage.integer(forKey: "Snooze")
+        if (snoozeTime == 0){
+            snoozeTime = 5
+        }
         mins = snoozeTime
         seconds = mins*60
         self.resumeTapped = false
@@ -166,15 +170,25 @@ class AlarmViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        
+        mins = settingsPage.integer(forKey: "Default")
+        if (mins == 0){
+            mins = 30
+        }
+        seconds = mins * 60
+        timerLabel.text = String(mins) + ":00"
+       
         do{
             
-            var sound = settingsPage.string(forKey: "Sound")
-            if (sound?.isEmpty)!{
-                sound = "sound1"
-            }
             
-            let audioPath = Bundle.main.path(forResource: sound, ofType: "mp3")
-            try player = AVAudioPlayer(contentsOf:URL(fileURLWithPath:audioPath!))
+            if let sound = settingsPage.string(forKey: "Sound"), !sound.isEmpty{
+                let audioPath = Bundle.main.path(forResource: sound, ofType: "mp3")
+                try player = AVAudioPlayer(contentsOf:URL(fileURLWithPath:audioPath!))
+            } else {
+                let sound = "sound1"
+                let audioPath = Bundle.main.path(forResource: sound, ofType: "mp3")
+                try player = AVAudioPlayer(contentsOf:URL(fileURLWithPath:audioPath!))
+            }
         }
         catch{
             //Error
