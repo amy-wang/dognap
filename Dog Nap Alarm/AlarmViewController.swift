@@ -51,7 +51,7 @@ class AlarmViewController: UIViewController {
             cancelOutlet.isHidden = true
             stopAlarmOutlet.isHidden = false
             snoozeOutlet.isHidden = false
-        }else{
+        } else{
             seconds -= 10     //this will decrement the time
             timerLabel.text = timeString(time: TimeInterval(seconds))
         }
@@ -169,7 +169,6 @@ class AlarmViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
         
         mins = settingsPage.integer(forKey: "Default")
         if (mins == 0){

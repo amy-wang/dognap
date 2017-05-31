@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="OZ1-GT-MEv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="OZ1-GT-MEv">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,7 +13,7 @@
         <!--Alarm View Controller-->
         <scene sceneID="ZOo-IF-sWO">
             <objects>
-                <viewController storyboardIdentifier="alarm" id="OZ1-GT-MEv" customClass="AlarmViewController" customModule="Dog_Nap_Alarm" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="alarm" id="OZ1-GT-MEv" customClass="AlarmViewController" customModule="DogNapAlarm" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YR0-tt-aje"/>
                         <viewControllerLayoutGuide type="bottom" id="DAh-hO-6YN"/>
@@ -177,11 +177,20 @@
                         <outlet property="startOutlet" destination="FCl-Km-jg6" id="6sB-zv-kfH"/>
                         <outlet property="stopAlarmOutlet" destination="MT2-Vb-r9m" id="blo-HV-DNd"/>
                         <outlet property="timerLabel" destination="Zkz-jD-8YH" id="L3i-Qt-31K"/>
+                        <segue destination="2pC-cf-jZA" kind="show" identifier="AlarmToDogChooseSegue" id="Wr2-fa-k0f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vht-7K-k37" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1781.5999999999999" y="37.331334332833585"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="lY2-ae-MBy">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="2pC-cf-jZA" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vX0-Hf-MmU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1998" y="-345"/>
         </scene>
         <!--settings-->
         <scene sceneID="4AG-C4-Qxa">

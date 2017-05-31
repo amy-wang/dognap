@@ -31,11 +31,6 @@ class DogCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if settings.bool(forKey: "firstBootCompleted"){
-            performSegue(withIdentifier: Storyboard.dogChosenSegueToAlarm, sender: nil)
-        }
-        
-        
         let collectionViewWidth = collectionView?.frame.width
         let itemWidth = (collectionViewWidth! - Storyboard.leftAndRightPaddings) / Storyboard.numberOfItemsPerRow
         
