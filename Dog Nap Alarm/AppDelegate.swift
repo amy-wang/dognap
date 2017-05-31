@@ -13,10 +13,30 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    let settings = UserDefaults.standard;
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        // initialize the SDK with your appID and devID
+        let sdk: STAStartAppSDK = STAStartAppSDK.sharedInstance()
+        sdk.appID = "204359592"
+        sdk.devID = "104491984"
+        
+        
+        
+        
+        if !settings.bool(forKey: "firstBootCompleted") {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "DogCollectionController")
+//            self.present(controller, animated: true, completion: nil)
+            self.window?.rootViewController = vc
+
+        } else {
+            let storyboard = UIStoryboard(name: "alarm", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "alarm")
+            self.window?.rootViewController = vc
+        }
+        
         return true
     }
 

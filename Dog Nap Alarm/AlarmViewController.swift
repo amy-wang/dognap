@@ -21,8 +21,9 @@ class AlarmViewController: UIViewController {
     @IBOutlet weak var snoozeOutlet: UIButton!
     @IBOutlet weak var stopAlarmOutlet: UIButton!
     @IBOutlet weak var dogSpeech: UILabel!
+    
 
-    //varibles
+    //Variables
     var player:AVAudioPlayer = AVAudioPlayer()
     var mins = 30
     var seconds = 1800
@@ -30,6 +31,9 @@ class AlarmViewController: UIViewController {
     var resumeTapped = false
     var isTimerunning = false
     var snoozeTime = 5
+    let settingsPage = UserDefaults.standard
+    var startAppBanner: STABannerView?
+  
    
     // method for counting down
     func runtimer(){
@@ -47,7 +51,7 @@ class AlarmViewController: UIViewController {
             cancelOutlet.isHidden = true
             stopAlarmOutlet.isHidden = false
             snoozeOutlet.isHidden = false
-        }else{
+        } else{
             seconds -= 10     //this will decrement the time
             timerLabel.text = timeString(time: TimeInterval(seconds))
         }
@@ -76,7 +80,12 @@ class AlarmViewController: UIViewController {
         let newHour = totalSec / 3600
         let newMin = totalSec / 60 % 60
         timerLabel.text = String(mins) + ":00"
-        dogSpeech.text = "You will wake up at: " + String(format:"%02i:%02i", newHour, newMin)
+        if(newHour <= 12){
+            dogSpeech.text = "You will wake up at: " + String(format:"%02i:%02i AM", newHour, newMin)
+        }else{
+            let temphour = newHour - 12
+            dogSpeech.text = "You will wake up at: " + String(format:"%02i:%02i PM", temphour, newMin)
+        }
         
     }
    
@@ -140,6 +149,10 @@ class AlarmViewController: UIViewController {
     @IBAction func snoozeBtn(_ sender: UIButton) {
         timer.invalidate()
         player.stop()
+        var snoozeTime = settingsPage.integer(forKey: "Snooze")
+        if (snoozeTime == 0){
+            snoozeTime = 5
+        }
         mins = snoozeTime
         seconds = mins*60
         self.resumeTapped = false
@@ -157,9 +170,24 @@ class AlarmViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        mins = settingsPage.integer(forKey: "Default")
+        if (mins == 0){
+            mins = 30
+        }
+        seconds = mins * 60
+        timerLabel.text = String(mins) + ":00"
+       
         do{
-            let audioPath = Bundle.main.path(forResource: "sound1", ofType: "mp3")
-            try player = AVAudioPlayer(contentsOf:URL(fileURLWithPath:audioPath!))
+            
+            
+            if let sound = settingsPage.string(forKey: "Sound"), !sound.isEmpty{
+                let audioPath = Bundle.main.path(forResource: sound, ofType: "mp3")
+                try player = AVAudioPlayer(contentsOf:URL(fileURLWithPath:audioPath!))
+            } else {
+                let sound = "sound1"
+                let audioPath = Bundle.main.path(forResource: sound, ofType: "mp3")
+                try player = AVAudioPlayer(contentsOf:URL(fileURLWithPath:audioPath!))
+            }
         }
         catch{
             //Error
@@ -171,11 +199,17 @@ class AlarmViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func settingsPage(){
-        let storyboard = UIStoryboard(name: "settings", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "settings")
-        self.present(controller, animated: true, completion: nil)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if (startAppBanner == nil) {
+            startAppBanner = STABannerView(
+                size: STA_AutoAdSize,
+                autoOrigin: STAAdOrigin_Bottom,
+                with: self.view,
+                withDelegate: nil);
+            self.view.addSubview(startAppBanner!)
+        }
     }
-
-    
 }
+
+
