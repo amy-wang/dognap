@@ -23,7 +23,7 @@ class AlarmViewController: UIViewController {
     @IBOutlet weak var dogSpeech: UILabel!
     
 
-    //varibles
+    //Variables
     var player:AVAudioPlayer = AVAudioPlayer()
     var mins = 30
     var seconds = 1800
@@ -32,7 +32,7 @@ class AlarmViewController: UIViewController {
     var isTimerunning = false
     var snoozeTime = 5
     let settingsPage = UserDefaults.standard
-
+    var startAppBanner: STABannerView?
   
    
     // method for counting down
@@ -200,5 +200,17 @@ class AlarmViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if (startAppBanner == nil) {
+            startAppBanner = STABannerView(
+                size: STA_AutoAdSize,
+                autoOrigin: STAAdOrigin_Bottom,
+                with: self.view,
+                withDelegate: nil);
+            self.view.addSubview(startAppBanner!)
+        }
+    }
 }
+
+

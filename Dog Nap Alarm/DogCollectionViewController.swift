@@ -30,7 +30,12 @@ class DogCollectionViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        if settings.bool(forKey: "firstBootCompleted"){
+            performSegue(withIdentifier: Storyboard.dogChosenSegueToAlarm, sender: nil)
+        }
+        
+        
         let collectionViewWidth = collectionView?.frame.width
         let itemWidth = (collectionViewWidth! - Storyboard.leftAndRightPaddings) / Storyboard.numberOfItemsPerRow
         
@@ -93,22 +98,29 @@ class DogCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         // Update images on select/deselect
-        if checkArray.contains(indexPath.row) {
-            let index = checkArray.index(of: indexPath.row)
-            checkArray.remove(at: index!)
-        } else {
-            if (checkArray.isEmpty) {
+        if (checkArray.isEmpty) {
+            checkArray.append(indexPath.row)
+        }
+        else {
+            if checkArray.contains(indexPath.row) {
+                let index = checkArray.index(of: indexPath.row)
+                checkArray.remove(at: index!)
+            }
+            else if (checkArray.count == 1){
                 checkArray.append(indexPath.row)
+                let removedIndexRow = checkArray.removeFirst()
+                let removedIndexPath = IndexPath(row: removedIndexRow, section: 0);
+                collectionView.reloadItems(at: [removedIndexPath])
             }
         }
         
         // Update choose button based on selection
-        if checkArray.isEmpty {
-            chooseButton!.isEnabled = false;
-            chooseButton!.isUserInteractionEnabled = false;
-        } else {
+        if checkArray.count == 1 {
             chooseButton!.isEnabled = true;
             chooseButton!.isUserInteractionEnabled = true;
+        } else {
+            chooseButton!.isEnabled = false;
+            chooseButton!.isUserInteractionEnabled = false;
         }
         
         collectionView.reloadItems(at: [indexPath])
@@ -146,8 +158,8 @@ class DogCollectionViewController: UICollectionViewController {
         let dogName = dogNames[dogIndex];
         settings.set(dogName, forKey: "dogName")
         
-        if !settings.bool(forKey: "firstBoot") {
-            settings.set(true, forKey: "firstBoot");
+        if !settings.bool(forKey: "firstBootCompleted") {
+            settings.set(true, forKey: "firstBootCompleted");
             performSegue(withIdentifier: Storyboard.dogChosenSegueToAlarm, sender: button)
         } else {
             performSegue(withIdentifier: Storyboard.dogChosenSegueToSettings, sender: button)
