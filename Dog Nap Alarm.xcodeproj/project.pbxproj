@@ -258,6 +258,7 @@
 				TargetAttributes = {
 					715996DC1EDA2453008ED2D5 = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 7R33YR7WGF;
 						ProvisioningStyle = Automatic;
 					};
 					715996F31EDA2453008ED2D5 = {
@@ -488,6 +489,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7R33YR7WGF;
 				INFOPLIST_FILE = "Dog Nap Alarm/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -501,6 +503,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7R33YR7WGF;
 				INFOPLIST_FILE = "Dog Nap Alarm/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
