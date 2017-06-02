@@ -9,6 +9,7 @@
 import UIKit
 import AVFoundation
 import Foundation
+import AudioToolbox
 
 class AlarmViewController: UIViewController {
     
@@ -32,6 +33,7 @@ class AlarmViewController: UIViewController {
     var isTimerunning = false
     var snoozeTime = 5
     let settingsPage = UserDefaults.standard
+    var isVibrate = false
 
   
    
@@ -42,6 +44,7 @@ class AlarmViewController: UIViewController {
     
     // function to update timer
     func updateTimer(){
+        print("timer updated")
         if(seconds == 0){
             timer.invalidate()
             player.play()
@@ -129,25 +132,10 @@ class AlarmViewController: UIViewController {
 
     }
     
-    @IBAction func stopBtn(_ sender: UIButton) {
-        timer.invalidate()
-        player.stop()
-        mins = 30
-        seconds = 1800
-        sliderOutlet.setValue(30, animated: true)
-        timerLabel.text = "30:00"
-        self.resumeTapped = false
-        
-        startOutlet.isHidden = false
-        sliderOutlet.isHidden = false
-        pauseOutlet.isHidden = true
-        cancelOutlet.isHidden = true
-        stopAlarmOutlet.isHidden = true
-        snoozeOutlet.isHidden = true
-    }
- 
+    
     @IBAction func snoozeBtn(_ sender: UIButton) {
         timer.invalidate()
+        isVibrate = false
         player.stop()
         var snoozeTime = settingsPage.integer(forKey: "Snooze")
         if (snoozeTime == 0){
@@ -165,6 +153,9 @@ class AlarmViewController: UIViewController {
         runtimer()
     }
     
+    func vibrate(){
+        AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -193,6 +184,11 @@ class AlarmViewController: UIViewController {
         catch{
             //Error
         }
+        
+        //color setting
+        view.backgroundColor = UIColor(hex:"222831")
+        timerLabel.textColor = UIColor(hex:"EEEEEE")
+        
     }
     
     override func didReceiveMemoryWarning() {
