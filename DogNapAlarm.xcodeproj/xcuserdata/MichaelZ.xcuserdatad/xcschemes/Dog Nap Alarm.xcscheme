@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "715996DC1EDA2453008ED2D5"
-            BuildableName = "Dog Nap Alarm.app"
-            BlueprintName = "Dog Nap Alarm"
-            ReferencedContainer = "container:Dog Nap Alarm.xcodeproj">
+            BuildableName = "DogNapAlarm.app"
+            BlueprintName = "DogNapAlarm"
+            ReferencedContainer = "container:DogNapAlarm.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "715996DC1EDA2453008ED2D5"
-            BuildableName = "Dog Nap Alarm.app"
-            BlueprintName = "Dog Nap Alarm"
-            ReferencedContainer = "container:Dog Nap Alarm.xcodeproj">
+            BuildableName = "DogNapAlarm.app"
+            BlueprintName = "DogNapAlarm"
+            ReferencedContainer = "container:DogNapAlarm.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
