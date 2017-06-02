@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		40883C1C1EDDF01A00C601C9 /* HexToUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40883C1B1EDDF01A00C601C9 /* HexToUIColor.swift */; };
+		40883C1C1EDDF01A00C601C9 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40883C1B1EDDF01A00C601C9 /* UIColor+Extension.swift */; };
 		40883C1F1EDE447B00C601C9 /* StartApp.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 40883C1D1EDE447B00C601C9 /* StartApp.bundle */; };
 		40883C201EDE447B00C601C9 /* StartApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40883C1E1EDE447B00C601C9 /* StartApp.framework */; };
 		40883C231EDE44ED00C601C9 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40883C221EDE44ED00C601C9 /* CoreTelephony.framework */; };
@@ -34,6 +34,7 @@
 		715AA2381EDA4AC000B8254C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715AA2371EDA4AC000B8254C /* SettingsViewController.swift */; };
 		715AA23E1EDDD1A300B8254C /* SoundTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715AA23D1EDDD1A300B8254C /* SoundTableViewController.swift */; };
 		715AA2421EDE13DC00B8254C /* SettingsDetailUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715AA2411EDE13DC00B8254C /* SettingsDetailUILabel.swift */; };
+		84A2FC281EE1046400D56F37 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A2FC271EE1046400D56F37 /* background.png */; };
 		84C738DA1EDCEC4300BCA545 /* sound1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 84C738D91EDCEC4300BCA545 /* sound1.mp3 */; };
 		84CC5E821EDA474D003B56C3 /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CC5E811EDA474D003B56C3 /* AlarmViewController.swift */; };
 /* End PBXBuildFile section */
@@ -56,7 +57,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		40883C1B1EDDF01A00C601C9 /* HexToUIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HexToUIColor.swift; sourceTree = "<group>"; };
+		40883C1B1EDDF01A00C601C9 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		40883C1D1EDE447B00C601C9 /* StartApp.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = StartApp.bundle; path = "Dog Nap Alarm/sdk/IOS-InApp SDK-InApp-3.4.2/StartApp.bundle"; sourceTree = "<group>"; };
 		40883C1E1EDE447B00C601C9 /* StartApp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StartApp.framework; path = "Dog Nap Alarm/sdk/IOS-InApp SDK-InApp-3.4.2/StartApp.framework"; sourceTree = "<group>"; };
 		40883C221EDE44ED00C601C9 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
@@ -90,6 +91,7 @@
 		715AA2371EDA4AC000B8254C /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		715AA23D1EDDD1A300B8254C /* SoundTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundTableViewController.swift; sourceTree = "<group>"; };
 		715AA2411EDE13DC00B8254C /* SettingsDetailUILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsDetailUILabel.swift; sourceTree = "<group>"; };
+		84A2FC271EE1046400D56F37 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		84C738D91EDCEC4300BCA545 /* sound1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound1.mp3; sourceTree = "<group>"; };
 		84CC5E811EDA474D003B56C3 /* AlarmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -132,7 +134,7 @@
 		40883C1A1EDDEFD100C601C9 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				40883C1B1EDDF01A00C601C9 /* HexToUIColor.swift */,
+				40883C1B1EDDF01A00C601C9 /* UIColor+Extension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -192,13 +194,14 @@
 				40883C1A1EDDEFD100C601C9 /* Extensions */,
 				40D4E19D1EDCF6C4005F0466 /* Views */,
 				84CC5E801EDA4721003B56C3 /* ViewControllers */,
-				715AA2321EDA37A100B8254C /* Storyboard */,
+				715AA2321EDA37A100B8254C /* Storyboards */,
 				715996E01EDA2453008ED2D5 /* AppDelegate.swift */,
 				715996EA1EDA2453008ED2D5 /* Assets.xcassets */,
 				715996EC1EDA2453008ED2D5 /* LaunchScreen.storyboard */,
 				715996EF1EDA2453008ED2D5 /* Info.plist */,
 				715996E71EDA2453008ED2D5 /* Dog_Nap_Alarm.xcdatamodeld */,
-				84C738D91EDCEC4300BCA545 /* sound1.mp3 */,
+				84A2FC271EE1046400D56F37 /* background.png */,
+				84A2FC261EE1044100D56F37 /* sounds */,
 			);
 			path = "Dog Nap Alarm";
 			sourceTree = "<group>";
@@ -221,14 +224,22 @@
 			path = "Dog Nap AlarmUITests";
 			sourceTree = "<group>";
 		};
-		715AA2321EDA37A100B8254C /* Storyboard */ = {
+		715AA2321EDA37A100B8254C /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
 				715AA2331EDA37B700B8254C /* alarm.storyboard */,
 				715996E41EDA2453008ED2D5 /* Main.storyboard */,
 				715AA2351EDA380A00B8254C /* settings.storyboard */,
 			);
-			name = Storyboard;
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		84A2FC261EE1044100D56F37 /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				84C738D91EDCEC4300BCA545 /* sound1.mp3 */,
+			);
+			name = sounds;
 			sourceTree = "<group>";
 		};
 		84CC5E801EDA4721003B56C3 /* ViewControllers */ = {
@@ -311,7 +322,7 @@
 				TargetAttributes = {
 					715996DC1EDA2453008ED2D5 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 7R33YR7WGF;
+						DevelopmentTeam = MXX23343G4;
 						ProvisioningStyle = Automatic;
 					};
 					715996F31EDA2453008ED2D5 = {
@@ -355,6 +366,7 @@
 				40883C1F1EDE447B00C601C9 /* StartApp.bundle in Resources */,
 				715996EE1EDA2453008ED2D5 /* LaunchScreen.storyboard in Resources */,
 				715AA2341EDA37B700B8254C /* alarm.storyboard in Resources */,
+				84A2FC281EE1046400D56F37 /* background.png in Resources */,
 				715996EB1EDA2453008ED2D5 /* Assets.xcassets in Resources */,
 				715996E61EDA2453008ED2D5 /* Main.storyboard in Resources */,
 				715AA2361EDA380A00B8254C /* settings.storyboard in Resources */,
@@ -384,7 +396,7 @@
 			files = (
 				715996E31EDA2453008ED2D5 /* ViewController.swift in Sources */,
 				40D4E19B1EDCE06A005F0466 /* DogCollectionViewController.swift in Sources */,
-				40883C1C1EDDF01A00C601C9 /* HexToUIColor.swift in Sources */,
+				40883C1C1EDDF01A00C601C9 /* UIColor+Extension.swift in Sources */,
 				715996E11EDA2453008ED2D5 /* AppDelegate.swift in Sources */,
 				715996E91EDA2453008ED2D5 /* Dog_Nap_Alarm.xcdatamodeld in Sources */,
 				715AA2381EDA4AC000B8254C /* SettingsViewController.swift in Sources */,
@@ -543,6 +555,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+
+				DEVELOPMENT_TEAM = MXX23343G4;
+				INFOPLIST_FILE = "Dog Nap Alarm/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Yucen-Z";
 				DEVELOPMENT_TEAM = 7R33YR7WGF;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -564,6 +582,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = MXX23343G4;
+				INFOPLIST_FILE = "Dog Nap Alarm/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Yucen-Z";
 				DEVELOPMENT_TEAM = 7R33YR7WGF;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
