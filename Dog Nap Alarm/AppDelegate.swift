@@ -22,9 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         sdk.appID = "204359592"
         sdk.devID = "104491984"
         
-        
-        
-        
         if !settings.bool(forKey: "firstBootCompleted") {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "DogCollectionController")

@@ -30,7 +30,7 @@ class DogCollectionViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
         let collectionViewWidth = collectionView?.frame.width
         let itemWidth = (collectionViewWidth! - Storyboard.leftAndRightPaddings) / Storyboard.numberOfItemsPerRow
         
@@ -59,6 +59,15 @@ class DogCollectionViewController: UICollectionViewController {
         ]
         
         chooseButton = addChooseButton();
+        
+        // Check Pre-selected Dog
+        let dogName = settings.string(forKey: "dogName");
+        if (dogName != nil) {
+            let dogIndex = dogNames.index(of: dogName!);
+            checkArray.append(dogIndex!);
+            let dogIndexPath = IndexPath(row: dogIndex!, section: 0);
+            collectionView?.reloadItems(at: [dogIndexPath])
+        }
     }
 
     // MARK: UICollectionViewDataSource
@@ -149,9 +158,10 @@ class DogCollectionViewController: UICollectionViewController {
     }
     
     func pressButton(button: UIButton) {
-        let dogIndex = checkArray[0];
-        let dogName = dogNames[dogIndex];
+        let dogIndex = checkArray.first;
+        let dogName = dogNames[dogIndex!];
         settings.set(dogName, forKey: "dogName")
+        print("!!!!!!DOG NAME IS " + dogName);
         
         if !settings.bool(forKey: "firstBootCompleted") {
             settings.set(true, forKey: "firstBootCompleted");
