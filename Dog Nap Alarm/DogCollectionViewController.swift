@@ -30,7 +30,7 @@ class DogCollectionViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+    
         let collectionViewWidth = collectionView?.frame.width
         let itemWidth = (collectionViewWidth! - Storyboard.leftAndRightPaddings) / Storyboard.numberOfItemsPerRow
         
@@ -59,6 +59,15 @@ class DogCollectionViewController: UICollectionViewController {
         ]
         
         chooseButton = addChooseButton();
+        
+        // Check Pre-selected Dog
+        let dogName = settings.string(forKey: "dogName");
+        if (dogName != nil) {
+            let dogIndex = dogNames.index(of: dogName!);
+            checkArray.append(dogIndex!);
+            let dogIndexPath = IndexPath(row: dogIndex!, section: 0);
+            collectionView?.reloadItems(at: [dogIndexPath])
+        }
     }
 
     // MARK: UICollectionViewDataSource
@@ -93,22 +102,29 @@ class DogCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         // Update images on select/deselect
-        if checkArray.contains(indexPath.row) {
-            let index = checkArray.index(of: indexPath.row)
-            checkArray.remove(at: index!)
-        } else {
-            if (checkArray.isEmpty) {
+        if (checkArray.isEmpty) {
+            checkArray.append(indexPath.row)
+        }
+        else {
+            if checkArray.contains(indexPath.row) {
+                let index = checkArray.index(of: indexPath.row)
+                checkArray.remove(at: index!)
+            }
+            else if (checkArray.count == 1){
                 checkArray.append(indexPath.row)
+                let removedIndexRow = checkArray.removeFirst()
+                let removedIndexPath = IndexPath(row: removedIndexRow, section: 0);
+                collectionView.reloadItems(at: [removedIndexPath])
             }
         }
         
         // Update choose button based on selection
-        if checkArray.isEmpty {
-            chooseButton!.isEnabled = false;
-            chooseButton!.isUserInteractionEnabled = false;
-        } else {
+        if checkArray.count == 1 {
             chooseButton!.isEnabled = true;
             chooseButton!.isUserInteractionEnabled = true;
+        } else {
+            chooseButton!.isEnabled = false;
+            chooseButton!.isUserInteractionEnabled = false;
         }
         
         collectionView.reloadItems(at: [indexPath])
@@ -142,12 +158,13 @@ class DogCollectionViewController: UICollectionViewController {
     }
     
     func pressButton(button: UIButton) {
-        let dogIndex = checkArray[0];
-        let dogName = dogNames[dogIndex];
+        let dogIndex = checkArray.first;
+        let dogName = dogNames[dogIndex!];
         settings.set(dogName, forKey: "dogName")
+        print("!!!!!!DOG NAME IS " + dogName);
         
-        if !settings.bool(forKey: "firstBoot") {
-            settings.set(true, forKey: "firstBoot");
+        if !settings.bool(forKey: "firstBootCompleted") {
+            settings.set(true, forKey: "firstBootCompleted");
             performSegue(withIdentifier: Storyboard.dogChosenSegueToAlarm, sender: button)
         } else {
             performSegue(withIdentifier: Storyboard.dogChosenSegueToSettings, sender: button)
