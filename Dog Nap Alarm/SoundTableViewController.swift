@@ -12,7 +12,9 @@ class SoundTableViewController: UITableViewController {
     
     
     let settings = UserDefaults.standard
-    var alarmSounds = ["Sound 1", "Sound 2", "Sound 3"]
+    var alarmSounds = ["sound1", "sound2", "sound3"]
+    var snoozeTime = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    var defaultTime = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,25 +37,56 @@ class SoundTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return alarmSounds.count
+        var count = 0
+        if (settings.string(forKey: "settingValue") == "Sound"){
+            count = alarmSounds.count
+        }
+        else if (settings.string(forKey: "settingValue") == "Snooze"){
+            count = snoozeTime.count
+        }
+        else{
+            count = defaultTime.count
+        }
+        return count 
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // configuring cell
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Sound Cell", for: indexPath)
-        let sound = alarmSounds[indexPath.row]
-        cell.textLabel?.text = sound
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        if (settings.string(forKey: "settingValue") == "Sound"){
+            let value = alarmSounds[indexPath.row]
+            cell.textLabel?.text = value
+        }
+        else if (settings.string(forKey: "settingValue") == "Snooze"){
+            let value = String(snoozeTime[indexPath.row])
+            cell.textLabel?.text = value + " min"
+        }
+        else{
+            let value = String(defaultTime[indexPath.row])
+            cell.textLabel?.text = value + " min"
+        }
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath)
         cell?.accessoryType = .checkmark
-        let sound = alarmSounds[indexPath.row]
-        settings.set(sound, forKey: "Sound")
-        print(sound)
+        if (settings.string(forKey: "settingValue") == "Sound"){
+            let value = alarmSounds[indexPath.row]
+            settings.set(value, forKey: "Sound")
+            print(value)
+        }
+        else if (settings.string(forKey: "settingValue") == "Snooze"){
+            let value = alarmSounds[indexPath.row]
+            settings.set(value, forKey: "Snooze")
+            print(value)
+        }
+        else{
+            let value = String(defaultTime[indexPath.row])
+            settings.set(value, forKey: "Default Time")
+            print(value)
+        }
     }
     
     override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
