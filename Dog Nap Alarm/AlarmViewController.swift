@@ -203,7 +203,7 @@ class AlarmViewController: UIViewController {
         super.viewDidAppear(animated)
         if (startAppBanner == nil) {
             startAppBanner = STABannerView(
-                size: STA_AutoAdSize,
+                size: STA_PortraitAdSize_320x50,
                 autoOrigin: STAAdOrigin_Bottom,
                 with: self.view,
                 withDelegate: nil);
