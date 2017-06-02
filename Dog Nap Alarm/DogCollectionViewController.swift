@@ -161,7 +161,6 @@ class DogCollectionViewController: UICollectionViewController {
         let dogIndex = checkArray.first;
         let dogName = dogNames[dogIndex!];
         settings.set(dogName, forKey: "dogName")
-        print("!!!!!!DOG NAME IS " + dogName);
         
         if !settings.bool(forKey: "firstBootCompleted") {
             settings.set(true, forKey: "firstBootCompleted");
