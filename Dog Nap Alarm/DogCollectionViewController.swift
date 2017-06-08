@@ -30,6 +30,8 @@ class DogCollectionViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
     
         let collectionViewWidth = collectionView?.frame.width
         let itemWidth = (collectionViewWidth! - Storyboard.leftAndRightPaddings) / Storyboard.numberOfItemsPerRow
@@ -161,7 +163,6 @@ class DogCollectionViewController: UICollectionViewController {
         let dogIndex = checkArray.first;
         let dogName = dogNames[dogIndex!];
         settings.set(dogName, forKey: "dogName")
-        print("!!!!!!DOG NAME IS " + dogName);
         
         if !settings.bool(forKey: "firstBootCompleted") {
             settings.set(true, forKey: "firstBootCompleted");

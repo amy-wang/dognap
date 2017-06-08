@@ -15,10 +15,12 @@ class SettingsViewController: UITableViewController{
 //    @IBOutlet weak var snoozeDone: UIButton!
 //    @IBOutlet var picker: UITableView!
 
+    
+    
     @IBOutlet weak var snoozeDetail: UILabel!
-
     @IBOutlet weak var defaultTimeDetail: UILabel!
-    @IBOutlet weak var soundDetail: UITableViewCell!
+    @IBOutlet weak var dogDetail: UILabel!
+    @IBOutlet weak var soundDetail: SettingsDetailUILabel!
 
     let settings = UserDefaults.standard // for storing setting values
     var settingsArray = ["Sound", "Snooze", "Default Nap Length"]
@@ -27,6 +29,12 @@ class SettingsViewController: UITableViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // default value 
+        settings.set("sound1", forKey: "Sound")
+        settings.set(1, forKey: "Snooze")
+        settings.set(10, forKey: "Default Time")
+        
 //        picker.isHidden = true
 //        snoozeDone.isHidden = true
 //        picker.dataSource = self
@@ -34,8 +42,12 @@ class SettingsViewController: UITableViewController{
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        soundDetail.text = settings.string(forKey: "Sound")
+        dogDetail.text = settings.string(forKey: "dogName")
         snoozeDetail.text = String(settings.integer(forKey: "Snooze")) + " min"
         defaultTimeDetail.text = String(settings.integer(forKey: "Default Time")) + " min"
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -163,7 +175,8 @@ class SettingsViewController: UITableViewController{
             settings.set("Sound", forKey: "settingValue")
         }
         else if (text=="Default Nap Length"){
-            settings.set("Default Nap Length", forKey: "settingValue")        }
+            settings.set("Default Nap Length", forKey: "settingValue")
+        }
         // pop up opens if rate/feedback clicked
         else if (text=="Rate/Feedback"){
             let alert = UIAlertController(title: "Dog Nap", message: "Did you enjoy using this app?" , preferredStyle: .alert)

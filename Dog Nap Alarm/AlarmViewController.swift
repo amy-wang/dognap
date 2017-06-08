@@ -175,6 +175,8 @@ class AlarmViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        
         mins = settingsPage.integer(forKey: "Default")
         if (mins == 0){
             mins = 30

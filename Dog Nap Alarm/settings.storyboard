@@ -166,7 +166,7 @@
                         </sections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Settings" id="N56-uF-6ob">
-                        <barButtonItem key="backBarButtonItem" title="Item" id="cCl-uQ-hMl"/>
+                        <barButtonItem key="backBarButtonItem" title="Settings" id="cCl-uQ-hMl"/>
                         <barButtonItem key="leftBarButtonItem" style="plain" id="9Ty-lE-VV8">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="X6j-p8-bJd">
                                 <rect key="frame" x="16" y="7" width="83" height="30"/>
@@ -180,8 +180,9 @@
                     </navigationItem>
                     <connections>
                         <outlet property="defaultTimeDetail" destination="dAs-7p-LC9" id="BR6-P4-3Al"/>
+                        <outlet property="dogDetail" destination="gCr-vP-YG1" id="g4n-cd-s6I"/>
                         <outlet property="snoozeDetail" destination="vcp-Iv-Xxa" id="kQM-n1-dUC"/>
-                        <outlet property="soundDetail" destination="REd-ey-kEN" id="Sj5-mU-XCQ"/>
+                        <outlet property="soundDetail" destination="Dhq-NF-xH4" id="3eg-JT-VNe"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VGg-l9-jkV" userLabel="First Responder" sceneMemberID="firstResponder"/>
