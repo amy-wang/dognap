@@ -22,7 +22,7 @@ class AlarmViewController: UIViewController {
     @IBOutlet weak var snoozeOutlet: UIButton!
     @IBOutlet weak var stopAlarmOutlet: UIButton!
     @IBOutlet weak var dogSpeech: UILabel!
-    
+    @IBOutlet weak var Setting_btn: UIButton!
 
     //Variables
     var player:AVAudioPlayer = AVAudioPlayer()
@@ -181,6 +181,8 @@ class AlarmViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         self.navigationController?.setNavigationBarHidden(true, animated: true)
+        
+        Setting_btn.imageView?.contentMode = .scaleAspectFit
         
         mins = settingsPage.integer(forKey: "Default")
         if (mins == 0){
