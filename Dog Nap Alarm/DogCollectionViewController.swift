@@ -139,7 +139,7 @@ class DogCollectionViewController: UICollectionViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("CHOOSE", for: UIControlState.normal)
         button.setTitleColor(UIColor.white, for: UIControlState.normal)
-        button.backgroundColor = UIColor(hex: "00FF80")
+        button.backgroundColor = UIColor(hex: "12C200")
         button.accessibilityIdentifier = "ChooseButtonID"
         
         // Button Action + Disable Before Choice
