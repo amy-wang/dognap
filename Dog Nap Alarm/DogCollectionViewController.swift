@@ -159,6 +159,12 @@ class DogCollectionViewController: UICollectionViewController {
         return button;
     }
     
+    // status bar
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
+    
     func pressButton(button: UIButton) {
         let dogIndex = checkArray.first;
         let dogName = dogNames[dogIndex!];

@@ -171,6 +171,11 @@ class AlarmViewController: UIViewController {
         AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
     }
     
+    // status bar
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
