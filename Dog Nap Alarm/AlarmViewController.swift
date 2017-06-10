@@ -210,6 +210,7 @@ class AlarmViewController: UIViewController {
         //color setting
         view.backgroundColor = UIColor(hex:"222831")
         timerLabel.textColor = UIColor(hex:"EEEEEE")
+        startOutlet.backgroundColor = UIColor(hex:"D0EBB8")
         
     }
     
