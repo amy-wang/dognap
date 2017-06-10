@@ -107,10 +107,14 @@ class AlarmViewController: UIViewController {
         if self.resumeTapped == false {
             timer.invalidate()
             self.resumeTapped = true
+            pauseOutlet.backgroundColor = UIColor(hex:"25A55B")
+            pauseOutlet.setTitleColor(UIColor(hex:"D0EBB8"), for: .normal)
             self.pauseOutlet.setTitle("RESUME",for: .normal)
         } else {
             runtimer()
             self.resumeTapped = false
+            pauseOutlet.backgroundColor = UIColor(hex:"147EAF")
+            pauseOutlet.setTitleColor(UIColor(hex:"B2DBED"), for: .normal)
             self.pauseOutlet.setTitle("PAULSE",for: .normal)
         }
     }
@@ -210,8 +214,19 @@ class AlarmViewController: UIViewController {
         //color setting
         view.backgroundColor = UIColor(hex:"222831")
         timerLabel.textColor = UIColor(hex:"EEEEEE")
-        startOutlet.backgroundColor = UIColor(hex:"D0EBB8")
+        startOutlet.backgroundColor = UIColor(hex:"25A55B")                 //Green
+        startOutlet.setTitleColor(UIColor(hex:"D0EBB8"), for: .normal)      //text green
         
+        cancelOutlet.backgroundColor = UIColor(hex:"2E3033")                //Grey
+        cancelOutlet.setTitleColor(UIColor(hex:"B8B8B8"), for: .normal)
+        
+        stopAlarmOutlet.backgroundColor = UIColor(hex:"D75A66")             //Red
+        stopAlarmOutlet.setTitleColor(UIColor(hex:"FFD1D6"), for: .normal)
+        
+        snoozeOutlet.backgroundColor = UIColor(hex:"147EAF")                //Blue
+        snoozeOutlet.setTitleColor(UIColor(hex:"B2DBED"), for: .normal)
+        
+
     }
     
     override func didReceiveMemoryWarning() {
