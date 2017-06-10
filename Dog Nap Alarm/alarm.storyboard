@@ -56,6 +56,7 @@
                                     <slider contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="30" minValue="1" maxValue="60" translatesAutoresizingMaskIntoConstraints="NO" id="JJ1-16-kMb">
                                         <rect key="frame" x="12" y="26" width="297" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" red="0.2671747304" green="0.61725038109999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <action selector="timeSlider:" destination="OZ1-GT-MEv" eventType="valueChanged" id="fNu-mO-iVZ"/>
                                         </connections>
@@ -85,7 +86,6 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.98377899563158933" green="0.96938222984185862" blue="0.99817576142131981" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="0.2653220410917484" green="0.71199456097687563" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="shiba" translatesAutoresizingMaskIntoConstraints="NO" id="jz6-gd-v0Q">
@@ -151,7 +151,6 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.34681356551472375" green="0.37485357521375406" blue="0.38345184816321742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

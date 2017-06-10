@@ -220,12 +220,16 @@ class AlarmViewController: UIViewController {
         cancelOutlet.backgroundColor = UIColor(hex:"2E3033")                //Grey
         cancelOutlet.setTitleColor(UIColor(hex:"B8B8B8"), for: .normal)
         
+        pauseOutlet.backgroundColor = UIColor(hex:"147EAF")
+        pauseOutlet.setTitleColor(UIColor(hex:"B2DBED"), for: .normal)
+        
         stopAlarmOutlet.backgroundColor = UIColor(hex:"D75A66")             //Red
         stopAlarmOutlet.setTitleColor(UIColor(hex:"FFD1D6"), for: .normal)
         
         snoozeOutlet.backgroundColor = UIColor(hex:"147EAF")                //Blue
         snoozeOutlet.setTitleColor(UIColor(hex:"B2DBED"), for: .normal)
         
+        sliderOutlet.tintColor = UIColor(hex:"147EAF")
 
     }
     
