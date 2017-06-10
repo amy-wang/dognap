@@ -167,9 +167,9 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Settings" id="N56-uF-6ob">
                         <barButtonItem key="backBarButtonItem" title="Settings" id="cCl-uQ-hMl"/>
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="9Ty-lE-VV8">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="9Ty-lE-VV8">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="X6j-p8-bJd">
-                                <rect key="frame" x="16" y="7" width="83" height="30"/>
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Back"/>
                                 <connections>

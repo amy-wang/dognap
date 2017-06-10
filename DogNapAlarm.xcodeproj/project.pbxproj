@@ -34,6 +34,7 @@
 		715AA2381EDA4AC000B8254C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715AA2371EDA4AC000B8254C /* SettingsViewController.swift */; };
 		715AA23E1EDDD1A300B8254C /* SoundTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715AA23D1EDDD1A300B8254C /* SoundTableViewController.swift */; };
 		715AA2421EDE13DC00B8254C /* SettingsDetailUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715AA2411EDE13DC00B8254C /* SettingsDetailUILabel.swift */; };
+		71BDEA341EEC582200A5AD1A /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71BDEA331EEC582200A5AD1A /* MessageUI.framework */; };
 		84C738DA1EDCEC4300BCA545 /* sound1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 84C738D91EDCEC4300BCA545 /* sound1.mp3 */; };
 		84CC5E821EDA474D003B56C3 /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CC5E811EDA474D003B56C3 /* AlarmViewController.swift */; };
 /* End PBXBuildFile section */
@@ -90,6 +91,7 @@
 		715AA2371EDA4AC000B8254C /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		715AA23D1EDDD1A300B8254C /* SoundTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundTableViewController.swift; sourceTree = "<group>"; };
 		715AA2411EDE13DC00B8254C /* SettingsDetailUILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsDetailUILabel.swift; sourceTree = "<group>"; };
+		71BDEA331EEC582200A5AD1A /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		84C738D91EDCEC4300BCA545 /* sound1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound1.mp3; sourceTree = "<group>"; };
 		84CC5E811EDA474D003B56C3 /* AlarmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71BDEA341EEC582200A5AD1A /* MessageUI.framework in Frameworks */,
 				40883C331EDE453400C601C9 /* libz.tbd in Frameworks */,
 				40883C311EDE452500C601C9 /* AVFoundation.framework in Frameworks */,
 				40883C2F1EDE451F00C601C9 /* CoreMedia.framework in Frameworks */,
@@ -140,6 +143,7 @@
 		40883C211EDE44EC00C601C9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				71BDEA331EEC582200A5AD1A /* MessageUI.framework */,
 				40883C321EDE453400C601C9 /* libz.tbd */,
 				40883C301EDE452500C601C9 /* AVFoundation.framework */,
 				40883C2E1EDE451F00C601C9 /* CoreMedia.framework */,
