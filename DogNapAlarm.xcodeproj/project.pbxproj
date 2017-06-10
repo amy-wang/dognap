@@ -323,7 +323,7 @@
 				TargetAttributes = {
 					715996DC1EDA2453008ED2D5 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 7R33YR7WGF;
+						DevelopmentTeam = PGT2QLRLK6;
 						ProvisioningStyle = Automatic;
 					};
 					715996F31EDA2453008ED2D5 = {
@@ -555,7 +555,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7R33YR7WGF;
+				DEVELOPMENT_TEAM = PGT2QLRLK6;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -565,7 +565,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				NEW_SETTING = "";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.rain-pillar.Dog-Nap-Alarm";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Dog-Nap-Alarm";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Dog Nap Alarm/DogNapAlarm-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
@@ -576,7 +576,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7R33YR7WGF;
+				DEVELOPMENT_TEAM = PGT2QLRLK6;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -586,7 +586,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				NEW_SETTING = "";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.rain-pillar.Dog-Nap-Alarm";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Dog-Nap-Alarm";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Dog Nap Alarm/DogNapAlarm-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;

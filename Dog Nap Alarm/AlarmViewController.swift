@@ -22,7 +22,7 @@ class AlarmViewController: UIViewController {
     @IBOutlet weak var snoozeOutlet: UIButton!
     @IBOutlet weak var stopAlarmOutlet: UIButton!
     @IBOutlet weak var dogSpeech: UILabel!
-    
+    @IBOutlet weak var Setting_btn: UIButton!
 
     //Variables
     var player:AVAudioPlayer = AVAudioPlayer()
@@ -47,6 +47,7 @@ class AlarmViewController: UIViewController {
         if(seconds == 0){
             timer.invalidate()
             player.play()
+            dogSpeech.text = "WAKE UP!"
             startOutlet.isHidden = true
             sliderOutlet.isHidden = true
             pauseOutlet.isHidden = true
@@ -83,10 +84,10 @@ class AlarmViewController: UIViewController {
         let newMin = totalSec / 60 % 60
         timerLabel.text = String(mins) + ":00"
         if(newHour <= 12){
-            dogSpeech.text = "You will wake up at: " + String(format:"%02i:%02i AM", newHour, newMin)
+            dogSpeech.text = "You will wake up at " + String(format:"%02i:%02i AM", newHour, newMin)
         }else{
             let temphour = newHour - 12
-            dogSpeech.text = "You will wake up at: " + String(format:"%02i:%02i PM", temphour, newMin)
+            dogSpeech.text = "You will wake up at " + String(format:"%02i:%02i PM", temphour, newMin)
         }
         
     }
@@ -95,6 +96,7 @@ class AlarmViewController: UIViewController {
     // Start Button function
     @IBAction func startBtn(_ sender: UIButton) {
         runtimer()
+        dogSpeech.text = "ZZZZZ...."
         startOutlet.isHidden = true
         sliderOutlet.isHidden = true
         pauseOutlet.isHidden = false
@@ -107,11 +109,17 @@ class AlarmViewController: UIViewController {
         if self.resumeTapped == false {
             timer.invalidate()
             self.resumeTapped = true
+            pauseOutlet.backgroundColor = UIColor(hex:"25A55B")
+            pauseOutlet.setTitleColor(UIColor(hex:"D0EBB8"), for: .normal)
             self.pauseOutlet.setTitle("RESUME",for: .normal)
+            dogSpeech.text = "hey, What's up !"
         } else {
             runtimer()
             self.resumeTapped = false
+            pauseOutlet.backgroundColor = UIColor(hex:"147EAF")
+            pauseOutlet.setTitleColor(UIColor(hex:"B2DBED"), for: .normal)
             self.pauseOutlet.setTitle("PAULSE",for: .normal)
+            dogSpeech.text = "ZZZZZ...."
         }
     }
     
@@ -123,6 +131,7 @@ class AlarmViewController: UIViewController {
         seconds = 1800
         sliderOutlet.setValue(30, animated: true)
         timerLabel.text = "30:00"
+        dogSpeech.text = "Hi!"
         self.resumeTapped = false
         startOutlet.isHidden = false
         sliderOutlet.isHidden = false
@@ -138,6 +147,7 @@ class AlarmViewController: UIViewController {
         seconds = 1800
         sliderOutlet.setValue(30, animated: true)
         timerLabel.text = "30:00"
+        dogSpeech.text = "Hi!"
         self.resumeTapped = false
         
         startOutlet.isHidden = false
@@ -158,6 +168,7 @@ class AlarmViewController: UIViewController {
         mins = snoozeTime
         seconds = mins*60
         self.resumeTapped = false
+        dogSpeech.text = "ZZZZZ...."
         startOutlet.isHidden = true
         sliderOutlet.isHidden = true
         pauseOutlet.isHidden = false
@@ -171,11 +182,18 @@ class AlarmViewController: UIViewController {
         AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
     }
     
+    // status bar
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         self.navigationController?.setNavigationBarHidden(true, animated: true)
+        
+        Setting_btn.imageView?.contentMode = .scaleAspectFit
         
         mins = settingsPage.integer(forKey: "Default")
         if (mins == 0){
@@ -203,7 +221,23 @@ class AlarmViewController: UIViewController {
         //color setting
         view.backgroundColor = UIColor(hex:"222831")
         timerLabel.textColor = UIColor(hex:"EEEEEE")
+        startOutlet.backgroundColor = UIColor(hex:"25A55B")                 //Green
+        startOutlet.setTitleColor(UIColor(hex:"D0EBB8"), for: .normal)      //text green
         
+        cancelOutlet.backgroundColor = UIColor(hex:"2E3033")                //Grey
+        cancelOutlet.setTitleColor(UIColor(hex:"B8B8B8"), for: .normal)
+        
+        pauseOutlet.backgroundColor = UIColor(hex:"147EAF")
+        pauseOutlet.setTitleColor(UIColor(hex:"B2DBED"), for: .normal)
+        
+        stopAlarmOutlet.backgroundColor = UIColor(hex:"D75A66")             //Red
+        stopAlarmOutlet.setTitleColor(UIColor(hex:"FFD1D6"), for: .normal)
+        
+        snoozeOutlet.backgroundColor = UIColor(hex:"147EAF")                //Blue
+        snoozeOutlet.setTitleColor(UIColor(hex:"B2DBED"), for: .normal)
+        
+        sliderOutlet.tintColor = UIColor(hex:"147EAF")
+
     }
     
     override func didReceiveMemoryWarning() {
