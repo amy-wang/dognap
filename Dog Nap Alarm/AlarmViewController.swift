@@ -111,14 +111,14 @@ class AlarmViewController: UIViewController {
             self.resumeTapped = true
             pauseOutlet.backgroundColor = UIColor(hex:"25A55B")
             pauseOutlet.setTitleColor(UIColor(hex:"D0EBB8"), for: .normal)
-            self.pauseOutlet.setTitle("RESUME",for: .normal)
+            self.pauseOutlet.setTitle("Resume",for: .normal)
             dogSpeech.text = "hey, What's up !"
         } else {
             runtimer()
             self.resumeTapped = false
             pauseOutlet.backgroundColor = UIColor(hex:"147EAF")
             pauseOutlet.setTitleColor(UIColor(hex:"B2DBED"), for: .normal)
-            self.pauseOutlet.setTitle("PAULSE",for: .normal)
+            self.pauseOutlet.setTitle("Pause",for: .normal)
             dogSpeech.text = "ZZZZZ...."
         }
     }
