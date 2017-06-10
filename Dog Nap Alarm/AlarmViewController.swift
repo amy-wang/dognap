@@ -47,6 +47,7 @@ class AlarmViewController: UIViewController {
         if(seconds == 0){
             timer.invalidate()
             player.play()
+            dogSpeech.text = "WAKE UP!"
             startOutlet.isHidden = true
             sliderOutlet.isHidden = true
             pauseOutlet.isHidden = true
@@ -83,10 +84,10 @@ class AlarmViewController: UIViewController {
         let newMin = totalSec / 60 % 60
         timerLabel.text = String(mins) + ":00"
         if(newHour <= 12){
-            dogSpeech.text = "You will wake up at: " + String(format:"%02i:%02i AM", newHour, newMin)
+            dogSpeech.text = "You will wake up at " + String(format:"%02i:%02i AM", newHour, newMin)
         }else{
             let temphour = newHour - 12
-            dogSpeech.text = "You will wake up at: " + String(format:"%02i:%02i PM", temphour, newMin)
+            dogSpeech.text = "You will wake up at " + String(format:"%02i:%02i PM", temphour, newMin)
         }
         
     }
@@ -95,6 +96,7 @@ class AlarmViewController: UIViewController {
     // Start Button function
     @IBAction func startBtn(_ sender: UIButton) {
         runtimer()
+        dogSpeech.text = "ZZZZZ...."
         startOutlet.isHidden = true
         sliderOutlet.isHidden = true
         pauseOutlet.isHidden = false
@@ -110,12 +112,14 @@ class AlarmViewController: UIViewController {
             pauseOutlet.backgroundColor = UIColor(hex:"25A55B")
             pauseOutlet.setTitleColor(UIColor(hex:"D0EBB8"), for: .normal)
             self.pauseOutlet.setTitle("RESUME",for: .normal)
+            dogSpeech.text = "hey, What's up !"
         } else {
             runtimer()
             self.resumeTapped = false
             pauseOutlet.backgroundColor = UIColor(hex:"147EAF")
             pauseOutlet.setTitleColor(UIColor(hex:"B2DBED"), for: .normal)
             self.pauseOutlet.setTitle("PAULSE",for: .normal)
+            dogSpeech.text = "ZZZZZ...."
         }
     }
     
@@ -127,6 +131,7 @@ class AlarmViewController: UIViewController {
         seconds = 1800
         sliderOutlet.setValue(30, animated: true)
         timerLabel.text = "30:00"
+        dogSpeech.text = "Hi!"
         self.resumeTapped = false
         startOutlet.isHidden = false
         sliderOutlet.isHidden = false
@@ -142,6 +147,7 @@ class AlarmViewController: UIViewController {
         seconds = 1800
         sliderOutlet.setValue(30, animated: true)
         timerLabel.text = "30:00"
+        dogSpeech.text = "Hi!"
         self.resumeTapped = false
         
         startOutlet.isHidden = false
@@ -162,6 +168,7 @@ class AlarmViewController: UIViewController {
         mins = snoozeTime
         seconds = mins*60
         self.resumeTapped = false
+        dogSpeech.text = "ZZZZZ...."
         startOutlet.isHidden = true
         sliderOutlet.isHidden = true
         pauseOutlet.isHidden = false
