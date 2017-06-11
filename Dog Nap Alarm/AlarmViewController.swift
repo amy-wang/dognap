@@ -14,6 +14,7 @@ import AudioToolbox
 class AlarmViewController: UIViewController {
     
     //IB outlets
+    @IBOutlet weak var imageDog: UIImageView!
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var sliderOutlet: UISlider!
     @IBOutlet weak var startOutlet: UIButton!
@@ -192,6 +193,11 @@ class AlarmViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         self.navigationController?.setNavigationBarHidden(true, animated: true)
+        
+        
+        self.timerLabel.adjustsFontSizeToFitWidth = true
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+
         
         Setting_btn.imageView?.contentMode = .scaleAspectFit
         

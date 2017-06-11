@@ -561,7 +561,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				NEW_SETTING = "";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Dog-Nap-Alarm";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Indify.Dog-Nap-Alarm";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Dog Nap Alarm/DogNapAlarm-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
@@ -582,7 +582,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				NEW_SETTING = "";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Dog-Nap-Alarm";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Indify.Dog-Nap-Alarm";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Dog Nap Alarm/DogNapAlarm-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;

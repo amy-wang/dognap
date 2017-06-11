@@ -38,7 +38,7 @@ class DogCollectionViewController: UICollectionViewController {
         
         let layout = collectionViewLayout as! UICollectionViewFlowLayout
         layout.itemSize = CGSize(width: itemWidth, height: itemWidth)
-        
+                
         dogImages += [
             #imageLiteral(resourceName: "shiba_hex"),
             #imageLiteral(resourceName: "pug_hex"),
@@ -137,9 +137,11 @@ class DogCollectionViewController: UICollectionViewController {
         
         // Button View Settings
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("CHOOSE", for: UIControlState.normal)
+        button.setTitle("Choose", for: UIControlState.normal)
         button.setTitleColor(UIColor.white, for: UIControlState.normal)
-        button.backgroundColor = UIColor(hex: "12C200")
+        button.backgroundColor = UIColor(hex: "25A55B")
+        button.setTitleColor(UIColor(hex: "D0EBB8"), for: .normal)
+        button.titleLabel!.font = UIFont(name:"Helvetica",size:29)
         button.accessibilityIdentifier = "ChooseButtonID"
         
         // Button Action + Disable Before Choice
@@ -165,6 +167,7 @@ class DogCollectionViewController: UICollectionViewController {
     }
     
     
+    
     func pressButton(button: UIButton) {
         let dogIndex = checkArray.first;
         let dogName = dogNames[dogIndex!];
@@ -177,6 +180,10 @@ class DogCollectionViewController: UICollectionViewController {
             performSegue(withIdentifier: Storyboard.dogChosenSegueToSettings, sender: button)
         }
     }
+    
+    
 }
+
+
 
 
