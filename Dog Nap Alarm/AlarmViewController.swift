@@ -113,7 +113,7 @@ class AlarmViewController: UIViewController {
             pauseOutlet.backgroundColor = UIColor(hex:"25A55B")
             pauseOutlet.setTitleColor(UIColor(hex:"D0EBB8"), for: .normal)
             self.pauseOutlet.setTitle("Resume",for: .normal)
-            dogSpeech.text = "hey, What's up !"
+            dogSpeech.text = "Hey, what's up !"
         } else {
             runtimer()
             self.resumeTapped = false

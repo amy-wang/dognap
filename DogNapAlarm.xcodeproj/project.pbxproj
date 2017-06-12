@@ -37,6 +37,8 @@
 		71BDEA341EEC582200A5AD1A /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71BDEA331EEC582200A5AD1A /* MessageUI.framework */; };
 		84C738DA1EDCEC4300BCA545 /* sound1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 84C738D91EDCEC4300BCA545 /* sound1.mp3 */; };
 		84CC5E821EDA474D003B56C3 /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CC5E811EDA474D003B56C3 /* AlarmViewController.swift */; };
+		84F46C2B1EEE5CAB006DFD26 /* SegueToLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F46C2A1EEE5CAB006DFD26 /* SegueToLeft.swift */; };
+		84F46C2D1EEE5CB2006DFD26 /* SegueToRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F46C2C1EEE5CB2006DFD26 /* SegueToRight.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +96,8 @@
 		71BDEA331EEC582200A5AD1A /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		84C738D91EDCEC4300BCA545 /* sound1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound1.mp3; sourceTree = "<group>"; };
 		84CC5E811EDA474D003B56C3 /* AlarmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
+		84F46C2A1EEE5CAB006DFD26 /* SegueToLeft.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueToLeft.swift; sourceTree = "<group>"; };
+		84F46C2C1EEE5CB2006DFD26 /* SegueToRight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueToRight.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +206,8 @@
 				715996EC1EDA2453008ED2D5 /* LaunchScreen.storyboard */,
 				715996EF1EDA2453008ED2D5 /* Info.plist */,
 				715996E71EDA2453008ED2D5 /* Dog_Nap_Alarm.xcdatamodeld */,
+				84F46C2C1EEE5CB2006DFD26 /* SegueToRight.swift */,
+				84F46C2A1EEE5CAB006DFD26 /* SegueToLeft.swift */,
 				84A2FC261EE1044100D56F37 /* sounds */,
 			);
 			path = "Dog Nap Alarm";
@@ -397,10 +403,12 @@
 				715996E31EDA2453008ED2D5 /* ViewController.swift in Sources */,
 				40D4E19B1EDCE06A005F0466 /* DogCollectionViewController.swift in Sources */,
 				40883C1C1EDDF01A00C601C9 /* UIColor+Extension.swift in Sources */,
+				84F46C2D1EEE5CB2006DFD26 /* SegueToRight.swift in Sources */,
 				715996E11EDA2453008ED2D5 /* AppDelegate.swift in Sources */,
 				715996E91EDA2453008ED2D5 /* Dog_Nap_Alarm.xcdatamodeld in Sources */,
 				715AA2381EDA4AC000B8254C /* SettingsViewController.swift in Sources */,
 				84CC5E821EDA474D003B56C3 /* AlarmViewController.swift in Sources */,
+				84F46C2B1EEE5CAB006DFD26 /* SegueToLeft.swift in Sources */,
 				715AA23E1EDDD1A300B8254C /* SoundTableViewController.swift in Sources */,
 				715AA2421EDE13DC00B8254C /* SettingsDetailUILabel.swift in Sources */,
 				40D4E19F1EDCF6D9005F0466 /* DogImageCollectionViewCell.swift in Sources */,
