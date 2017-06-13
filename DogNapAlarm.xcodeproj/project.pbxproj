@@ -35,6 +35,26 @@
 		715AA23E1EDDD1A300B8254C /* SoundTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715AA23D1EDDD1A300B8254C /* SoundTableViewController.swift */; };
 		715AA2421EDE13DC00B8254C /* SettingsDetailUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715AA2411EDE13DC00B8254C /* SettingsDetailUILabel.swift */; };
 		71BDEA341EEC582200A5AD1A /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71BDEA331EEC582200A5AD1A /* MessageUI.framework */; };
+		8434BC1B1EEFB3BF00A90A2C /* awesomemorning_alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8434BC071EEFB3BF00A90A2C /* awesomemorning_alarm.mp3 */; };
+		8434BC1C1EEFB3BF00A90A2C /* banana_song.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8434BC081EEFB3BF00A90A2C /* banana_song.mp3 */; };
+		8434BC1D1EEFB3BF00A90A2C /* batman_on_drugs.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8434BC091EEFB3BF00A90A2C /* batman_on_drugs.mp3 */; };
+		8434BC1E1EEFB3BF00A90A2C /* brid_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8434BC0A1EEFB3BF00A90A2C /* brid_sound.mp3 */; };
+		8434BC1F1EEFB3BF00A90A2C /* darth_vader.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8434BC0B1EEFB3BF00A90A2C /* darth_vader.mp3 */; };
+		8434BC201EEFB3BF00A90A2C /* deadpool_iphone.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8434BC0C1EEFB3BF00A90A2C /* deadpool_iphone.mp3 */; };
+		8434BC211EEFB3BF00A90A2C /* despacito.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8434BC0D1EEFB3BF00A90A2C /* despacito.mp3 */; };
+		8434BC221EEFB3BF00A90A2C /* dog_bark.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8434BC0E1EEFB3BF00A90A2C /* dog_bark.mp3 */; };
+		8434BC231EEFB3BF00A90A2C /* elegant_ringtone.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8434BC0F1EEFB3BF00A90A2C /* elegant_ringtone.mp3 */; };
+		8434BC241EEFB3BF00A90A2C /* get_your_ass_up.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8434BC101EEFB3BF00A90A2C /* get_your_ass_up.mp3 */; };
+		8434BC251EEFB3BF00A90A2C /* good_bad_and_ugly.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8434BC111EEFB3BF00A90A2C /* good_bad_and_ugly.mp3 */; };
+		8434BC261EEFB3BF00A90A2C /* gta_5_alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8434BC121EEFB3BF00A90A2C /* gta_5_alarm.mp3 */; };
+		8434BC271EEFB3BF00A90A2C /* Loud_Alarm_Buzzer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8434BC131EEFB3BF00A90A2C /* Loud_Alarm_Buzzer.mp3 */; };
+		8434BC281EEFB3BF00A90A2C /* oldschool_bell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8434BC141EEFB3BF00A90A2C /* oldschool_bell.mp3 */; };
+		8434BC291EEFB3BF00A90A2C /* super_mario_bros.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8434BC151EEFB3BF00A90A2C /* super_mario_bros.mp3 */; };
+		8434BC2A1EEFB3BF00A90A2C /* thats_what_i_like.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8434BC161EEFB3BF00A90A2C /* thats_what_i_like.mp3 */; };
+		8434BC2B1EEFB3BF00A90A2C /* the_most_annoying_one.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8434BC171EEFB3BF00A90A2C /* the_most_annoying_one.mp3 */; };
+		8434BC2C1EEFB3BF00A90A2C /* wonder_woman_theme.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8434BC181EEFB3BF00A90A2C /* wonder_woman_theme.mp3 */; };
+		8434BC2D1EEFB3BF00A90A2C /* wtfLOL_ok_this_one_win.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8434BC191EEFB3BF00A90A2C /* wtfLOL_ok_this_one_win.mp3 */; };
+		8434BC2E1EEFB3BF00A90A2C /* yes_LOL.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8434BC1A1EEFB3BF00A90A2C /* yes_LOL.mp3 */; };
 		84C738DA1EDCEC4300BCA545 /* sound1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 84C738D91EDCEC4300BCA545 /* sound1.mp3 */; };
 		84CC5E821EDA474D003B56C3 /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CC5E811EDA474D003B56C3 /* AlarmViewController.swift */; };
 		84F46C2B1EEE5CAB006DFD26 /* SegueToLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F46C2A1EEE5CAB006DFD26 /* SegueToLeft.swift */; };
@@ -94,6 +114,26 @@
 		715AA23D1EDDD1A300B8254C /* SoundTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundTableViewController.swift; sourceTree = "<group>"; };
 		715AA2411EDE13DC00B8254C /* SettingsDetailUILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsDetailUILabel.swift; sourceTree = "<group>"; };
 		71BDEA331EEC582200A5AD1A /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		8434BC071EEFB3BF00A90A2C /* awesomemorning_alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = awesomemorning_alarm.mp3; sourceTree = "<group>"; };
+		8434BC081EEFB3BF00A90A2C /* banana_song.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = banana_song.mp3; sourceTree = "<group>"; };
+		8434BC091EEFB3BF00A90A2C /* batman_on_drugs.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = batman_on_drugs.mp3; sourceTree = "<group>"; };
+		8434BC0A1EEFB3BF00A90A2C /* brid_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = brid_sound.mp3; sourceTree = "<group>"; };
+		8434BC0B1EEFB3BF00A90A2C /* darth_vader.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = darth_vader.mp3; sourceTree = "<group>"; };
+		8434BC0C1EEFB3BF00A90A2C /* deadpool_iphone.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = deadpool_iphone.mp3; sourceTree = "<group>"; };
+		8434BC0D1EEFB3BF00A90A2C /* despacito.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = despacito.mp3; sourceTree = "<group>"; };
+		8434BC0E1EEFB3BF00A90A2C /* dog_bark.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dog_bark.mp3; sourceTree = "<group>"; };
+		8434BC0F1EEFB3BF00A90A2C /* elegant_ringtone.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = elegant_ringtone.mp3; sourceTree = "<group>"; };
+		8434BC101EEFB3BF00A90A2C /* get_your_ass_up.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = get_your_ass_up.mp3; sourceTree = "<group>"; };
+		8434BC111EEFB3BF00A90A2C /* good_bad_and_ugly.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = good_bad_and_ugly.mp3; sourceTree = "<group>"; };
+		8434BC121EEFB3BF00A90A2C /* gta_5_alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gta_5_alarm.mp3; sourceTree = "<group>"; };
+		8434BC131EEFB3BF00A90A2C /* Loud_Alarm_Buzzer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Loud_Alarm_Buzzer.mp3; sourceTree = "<group>"; };
+		8434BC141EEFB3BF00A90A2C /* oldschool_bell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = oldschool_bell.mp3; sourceTree = "<group>"; };
+		8434BC151EEFB3BF00A90A2C /* super_mario_bros.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = super_mario_bros.mp3; sourceTree = "<group>"; };
+		8434BC161EEFB3BF00A90A2C /* thats_what_i_like.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = thats_what_i_like.mp3; sourceTree = "<group>"; };
+		8434BC171EEFB3BF00A90A2C /* the_most_annoying_one.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = the_most_annoying_one.mp3; sourceTree = "<group>"; };
+		8434BC181EEFB3BF00A90A2C /* wonder_woman_theme.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wonder_woman_theme.mp3; sourceTree = "<group>"; };
+		8434BC191EEFB3BF00A90A2C /* wtfLOL_ok_this_one_win.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wtfLOL_ok_this_one_win.mp3; sourceTree = "<group>"; };
+		8434BC1A1EEFB3BF00A90A2C /* yes_LOL.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = yes_LOL.mp3; sourceTree = "<group>"; };
 		84C738D91EDCEC4300BCA545 /* sound1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound1.mp3; sourceTree = "<group>"; };
 		84CC5E811EDA474D003B56C3 /* AlarmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
 		84F46C2A1EEE5CAB006DFD26 /* SegueToLeft.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueToLeft.swift; sourceTree = "<group>"; };
@@ -244,6 +284,26 @@
 		84A2FC261EE1044100D56F37 /* sounds */ = {
 			isa = PBXGroup;
 			children = (
+				8434BC071EEFB3BF00A90A2C /* awesomemorning_alarm.mp3 */,
+				8434BC081EEFB3BF00A90A2C /* banana_song.mp3 */,
+				8434BC091EEFB3BF00A90A2C /* batman_on_drugs.mp3 */,
+				8434BC0A1EEFB3BF00A90A2C /* brid_sound.mp3 */,
+				8434BC0B1EEFB3BF00A90A2C /* darth_vader.mp3 */,
+				8434BC0C1EEFB3BF00A90A2C /* deadpool_iphone.mp3 */,
+				8434BC0D1EEFB3BF00A90A2C /* despacito.mp3 */,
+				8434BC0E1EEFB3BF00A90A2C /* dog_bark.mp3 */,
+				8434BC0F1EEFB3BF00A90A2C /* elegant_ringtone.mp3 */,
+				8434BC101EEFB3BF00A90A2C /* get_your_ass_up.mp3 */,
+				8434BC111EEFB3BF00A90A2C /* good_bad_and_ugly.mp3 */,
+				8434BC121EEFB3BF00A90A2C /* gta_5_alarm.mp3 */,
+				8434BC131EEFB3BF00A90A2C /* Loud_Alarm_Buzzer.mp3 */,
+				8434BC141EEFB3BF00A90A2C /* oldschool_bell.mp3 */,
+				8434BC151EEFB3BF00A90A2C /* super_mario_bros.mp3 */,
+				8434BC161EEFB3BF00A90A2C /* thats_what_i_like.mp3 */,
+				8434BC171EEFB3BF00A90A2C /* the_most_annoying_one.mp3 */,
+				8434BC181EEFB3BF00A90A2C /* wonder_woman_theme.mp3 */,
+				8434BC191EEFB3BF00A90A2C /* wtfLOL_ok_this_one_win.mp3 */,
+				8434BC1A1EEFB3BF00A90A2C /* yes_LOL.mp3 */,
 				84C738D91EDCEC4300BCA545 /* sound1.mp3 */,
 			);
 			name = sounds;
@@ -370,12 +430,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				84C738DA1EDCEC4300BCA545 /* sound1.mp3 in Resources */,
+				8434BC261EEFB3BF00A90A2C /* gta_5_alarm.mp3 in Resources */,
+				8434BC2E1EEFB3BF00A90A2C /* yes_LOL.mp3 in Resources */,
+				8434BC211EEFB3BF00A90A2C /* despacito.mp3 in Resources */,
 				40883C1F1EDE447B00C601C9 /* StartApp.bundle in Resources */,
+				8434BC1D1EEFB3BF00A90A2C /* batman_on_drugs.mp3 in Resources */,
+				8434BC2B1EEFB3BF00A90A2C /* the_most_annoying_one.mp3 in Resources */,
+				8434BC1C1EEFB3BF00A90A2C /* banana_song.mp3 in Resources */,
+				8434BC221EEFB3BF00A90A2C /* dog_bark.mp3 in Resources */,
 				715996EE1EDA2453008ED2D5 /* LaunchScreen.storyboard in Resources */,
+				8434BC231EEFB3BF00A90A2C /* elegant_ringtone.mp3 in Resources */,
+				8434BC251EEFB3BF00A90A2C /* good_bad_and_ugly.mp3 in Resources */,
+				8434BC1F1EEFB3BF00A90A2C /* darth_vader.mp3 in Resources */,
+				8434BC1E1EEFB3BF00A90A2C /* brid_sound.mp3 in Resources */,
+				8434BC271EEFB3BF00A90A2C /* Loud_Alarm_Buzzer.mp3 in Resources */,
 				715AA2341EDA37B700B8254C /* alarm.storyboard in Resources */,
+				8434BC281EEFB3BF00A90A2C /* oldschool_bell.mp3 in Resources */,
+				8434BC291EEFB3BF00A90A2C /* super_mario_bros.mp3 in Resources */,
 				715996EB1EDA2453008ED2D5 /* Assets.xcassets in Resources */,
+				8434BC1B1EEFB3BF00A90A2C /* awesomemorning_alarm.mp3 in Resources */,
 				715996E61EDA2453008ED2D5 /* Main.storyboard in Resources */,
+				8434BC2C1EEFB3BF00A90A2C /* wonder_woman_theme.mp3 in Resources */,
+				8434BC241EEFB3BF00A90A2C /* get_your_ass_up.mp3 in Resources */,
+				8434BC2D1EEFB3BF00A90A2C /* wtfLOL_ok_this_one_win.mp3 in Resources */,
 				715AA2361EDA380A00B8254C /* settings.storyboard in Resources */,
+				8434BC201EEFB3BF00A90A2C /* deadpool_iphone.mp3 in Resources */,
+				8434BC2A1EEFB3BF00A90A2C /* thats_what_i_like.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
