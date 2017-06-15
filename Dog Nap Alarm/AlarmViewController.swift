@@ -141,6 +141,21 @@ class AlarmViewController: UIViewController {
 
     }
     
+    
+    @IBAction func settingPage(_ sender: UIButton) {
+        timer.invalidate()
+        mins = 30
+        seconds = 1800
+        sliderOutlet.setValue(30, animated: true)
+        timerLabel.text = "30:00"
+        dogSpeech.text = "Hi!"
+        self.resumeTapped = false
+        startOutlet.isHidden = false
+        sliderOutlet.isHidden = false
+        pauseOutlet.isHidden = true
+        cancelOutlet.isHidden = true
+    }
+    
     @IBAction func stopBtn(_ sender: UIButton) {
         timer.invalidate()
         player.stop()
