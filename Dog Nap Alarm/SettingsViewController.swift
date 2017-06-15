@@ -23,6 +23,10 @@ class SettingsViewController: UITableViewController, MFMailComposeViewController
     var snoozeData: Bool = false
     
     
+    @IBAction func unwindToViewController (sender: UIStoryboardSegue){
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

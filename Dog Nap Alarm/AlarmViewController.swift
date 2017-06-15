@@ -188,7 +188,7 @@ class AlarmViewController: UIViewController {
         return .lightContent
     }
     
-    @IBAction func unwindToViewController (sender: UIStoryboardSegue){
+    @IBAction func unwindToAlarmViewController (sender: UIStoryboardSegue){
         
     }
     
