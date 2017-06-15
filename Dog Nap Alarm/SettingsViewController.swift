@@ -26,6 +26,7 @@ class SettingsViewController: UITableViewController, MFMailComposeViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         // default value 
         settings.set("sound1", forKey: "Sound")
         settings.set(1, forKey: "Snooze")

@@ -188,6 +188,10 @@ class AlarmViewController: UIViewController {
         return .lightContent
     }
     
+    @IBAction func unwindToViewController (sender: UIStoryboardSegue){
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

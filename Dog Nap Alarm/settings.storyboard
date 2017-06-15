@@ -173,7 +173,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
-                                    <segue destination="aYC-FO-CKn" kind="show" id="3EW-ZT-OuC"/>
+                                    <segue destination="NI8-j2-Etp" kind="unwind" unwindAction="unwindToViewControllerWithSender:" id="1LR-YP-ZlM"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -186,6 +186,7 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VGg-l9-jkV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="NI8-j2-Etp" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2428" y="-35.532233883058474"/>
         </scene>
