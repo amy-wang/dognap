@@ -175,9 +175,10 @@ class DogCollectionViewController: UICollectionViewController {
         
         if !settings.bool(forKey: "firstBootCompleted") {
             settings.set(true, forKey: "firstBootCompleted");
-            performSegue(withIdentifier: Storyboard.dogChosenSegueToAlarm, sender: button)
+            performSegue(withIdentifier: Storyboard.dogChosenSegueToAlarm, sender: self)
         } else {
-            performSegue(withIdentifier: Storyboard.dogChosenSegueToSettings, sender: button)
+//            performSegue(withIdentifier: Storyboard.dogChosenSegueToSettings, sender: button)
+            performSegue(withIdentifier: "unwindtoSettings", sender: self)
         }
     }
     

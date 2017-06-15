@@ -196,12 +196,7 @@ class AlarmViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
-        
-        
         self.timerLabel.adjustsFontSizeToFitWidth = true
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
-
         
         Setting_btn.imageView?.contentMode = .scaleAspectFit
         

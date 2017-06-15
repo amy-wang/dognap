@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Eme-Wv-dem">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Eme-Wv-dem">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -66,9 +66,11 @@
                     <connections>
                         <segue destination="raH-NV-Fub" kind="show" identifier="DogChosenSegueToSettings" id="juA-ZK-ApL"/>
                         <segue destination="ojl-Nt-cBU" kind="show" identifier="DogChosenSegueToAlarm" id="lGv-3r-Hhj"/>
+                        <segue destination="koT-fs-e7M" kind="unwind" identifier="unwindtoSettings" unwindAction="unwindToSettingViewControllerWithSender:" id="Gx9-ih-BDA"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WkD-1z-rAw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="koT-fs-e7M" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="202.5" y="57.04225352112676"/>
         </scene>

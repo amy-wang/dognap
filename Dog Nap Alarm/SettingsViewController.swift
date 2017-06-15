@@ -23,14 +23,12 @@ class SettingsViewController: UITableViewController, MFMailComposeViewController
     var snoozeData: Bool = false
     
     
-    @IBAction func unwindToViewController (sender: UIStoryboardSegue){
+    @IBAction func unwindToSettingViewController (sender: UIStoryboardSegue){
         
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         // default value 
         settings.set("sound1", forKey: "Sound")
         settings.set(1, forKey: "Snooze")
@@ -38,6 +36,7 @@ class SettingsViewController: UITableViewController, MFMailComposeViewController
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
         soundDetail.text = settings.string(forKey: "Sound")
         dogDetail.text = settings.string(forKey: "dogName")
         snoozeDetail.text = String(settings.integer(forKey: "Snooze")) + " min"
