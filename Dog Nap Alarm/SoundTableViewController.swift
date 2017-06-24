@@ -19,7 +19,11 @@ class SoundTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
+        self.tableView.backgroundColor = UIColor(hex:"08172D") //303841
+        
+        // don't display empty rows
+        tableView.tableFooterView = UIView()
+        
         // Uncomment the following line to preserve selection between presentations
         //self.clearsSelectionOnViewWillAppear = false
 
@@ -47,6 +51,18 @@ class SoundTableViewController: UITableViewController {
         }
         let cell = tableView.cellForRow(at: indexPath)
         cell?.accessoryType = .checkmark
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = UIColor.clear
+        cell.textLabel?.textColor = UIColor.white
+    }
+    
+    // change label and colors for sections
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int){
+        view.tintColor = UIColor(hex:"08172D")
+        let header = view as! UITableViewHeaderFooterView
+        header.textLabel?.textColor = UIColor.gray
     }
     
     override func didReceiveMemoryWarning() {

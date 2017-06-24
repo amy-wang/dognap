@@ -29,10 +29,32 @@ class SettingsViewController: UITableViewController, MFMailComposeViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.backgroundColor = UIColor(hex:"08172D") //303841
+        
+        
+        // don't display empty rows
+        tableView.tableFooterView = UIView()
+        
         // default value 
         settings.set("sound1", forKey: "Sound")
         settings.set(1, forKey: "Snooze")
         settings.set(10, forKey: "Default Time")
+    }
+    
+    // change label and colors for sections
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int){
+        view.tintColor = UIColor(hex:"08172D")
+        let header = view as! UITableViewHeaderFooterView
+        header.textLabel?.textColor = UIColor.gray
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = UIColor.clear
+        cell.textLabel?.textColor = UIColor.white
+        snoozeDetail.textColor = UIColor.lightGray
+        defaultTimeDetail.textColor = UIColor.lightGray
+        dogDetail.textColor = UIColor.lightGray
+        soundDetail.textColor = UIColor.lightGray
     }
     
     override func viewDidAppear(_ animated: Bool) {
